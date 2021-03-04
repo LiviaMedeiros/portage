@@ -32,7 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2021-02-03)
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-04)
+# Dead upstream, open bugs and unmaintained.
+# Removal in 30 days.
+net-dns/sheerdns
+
+# Mike Pagano <mpagano@gentoo.org> (2021-03-04)
+# This kernel version could corrupt your
+# filesystem by overwritting it with 
+# random swap data 
+=sys-kernel/git-sources-5.12_rc1
+
+# Sam James <sam@gentoo.org> (2021-03-03)
+# Declared abandoned upstream and stuck
+# on Python 3.7.
+# Removal in 30 days.
+app-office/moneyguru
+
+# Sam James <sam@gentoo.org> (2021-03-03)
 # Doesn't seem to sync clock correctly
 # in some cases.
 # bug #772998
