@@ -32,6 +32,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Alfredo Tupone <tupone@gentoo.org> (2021-03-05)
+# unbuildable
+# Removal on 2021-04-0r52
+www-servers/ocsigenserver
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Deprecated by upstream and unsupported due EOL.
+# Multiple bugs open and unmaintained.
+# Removal in 30 days.
+sys-apps/newrelic-sysmond
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream, multiple bugs open and unmaintained.
+# Removal in 30 days.
+app-mobilephone/smsclient
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream, multiple bugs open and unmaintained.
+# Removal in 30 days.
+net-misc/capi4hylafax
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream and unmaintained.
+# Removal in 30 days.
+app-misc/towitoko
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-04)
+# Dead upstream and unmaintained.
+# Removal in 30 days.
+app-misc/logserial
+
 # Conrad Kostecki <conikost@gentoo.org> (2021-03-04)
 # Dead upstream, open bugs and unmaintained.
 # Removal in 30 days.
