@@ -1470,7 +1470,6 @@ dev-haskell/hakyll:previewserver - Include the preview server
 dev-haskell/hakyll:usepandoc - Include Pandoc support
 dev-haskell/hakyll:watchserver - wait for filesystem changes and rebuild pages
 dev-haskell/happstack-server:network-uri - Get Network.URI from the network-uri package
-dev-haskell/happstack-server:template-haskell - Description: Template Haskell is available on this system
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
 dev-haskell/hashtables:detailed-profiling - add detailed profiling information to profiled build-depends
 dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC extensions.
@@ -4957,7 +4956,7 @@ media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/libva-utils:drm - Enables VA/DRM API support.
 media-video/libva-utils:examples - Build and install decode, encode, videoprocess and other VA-API examples.
 media-video/libva-utils:putsurface - Build and install putsurface tool.
-media-video/libva-utils:test_va_api - Install test_va_api tool for thorough testing of the installed VA-API.
+media-video/libva-utils:test-va-api - Install test_va_api tool for thorough testing of the installed VA-API.
 media-video/libva-utils:vainfo - Build and install vainfo tool.
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
 media-video/mjpg-streamer:input-control - Plugin giving ability to control camera movement (only specific cameras)
@@ -5049,7 +5048,6 @@ media-video/pipewire:jack - Enable SPA JACK plugin and emulation to be able to r
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:ldac - LDAC over Bluetooth (primarily Sony headphones)
 media-video/pipewire:pipewire-alsa - Replace PulseAudio's ALSA plugin with PipeWire's plugin
-media-video/pipewire:pulseaudio - Enable emulation to be able to run PulseAudio applications on top of PipeWire
 media-video/pipewire:vulkan - Uses Vulkan compute shaders to provide a CGI video source
 media-video/qmplay2:audiofilters - Build with AudioFilters module
 media-video/qmplay2:avdevice - Build FFmpeg module with libavdevice suport
@@ -5257,6 +5255,7 @@ net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up netwo
 net-analyzer/net-snmp:rpm - Enable monitoring of app-arch/rpm. This flag requires the bzip2 and zlib flags to be enabled as well.
 net-analyzer/net-snmp:smux - Enable support for the legacy smux protocol (superseded by agentx)
 net-analyzer/net-snmp:ucd-compat - Build UCD compatibility library. Increases significantly the install size.
+net-analyzer/netdata:cloud - Enable Netdata Cloud support
 net-analyzer/netdata:compression - Enable compression via zlib
 net-analyzer/netdata:dbengine - Enable the Netdata database engine
 net-analyzer/netdata:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors.
