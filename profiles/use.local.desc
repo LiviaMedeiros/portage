@@ -1466,7 +1466,6 @@ dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC e
 dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
 dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
 dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
-dev-haskell/hexpat:bundled-expat - Use bundled expat instead of dev-libs/expat
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
 dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour
@@ -1736,6 +1735,7 @@ dev-lang/gnat-gpl:systemtap - enable systemtap static probe points
 dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/janet:static-libs - install janet static library archive, you must enable this flag for using `jpm build`
+dev-lang/jerryscript:debugger - Install jerry-debugger
 dev-lang/jsonnet:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 dev-lang/julia:system-llvm - (Try to) Use the system LLVM install. YMMV.
 dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
@@ -4480,6 +4480,7 @@ media-sound/audacity:vst - Enable VST plugin support
 media-sound/audiotools:cue - Enable CUE sheet support
 media-sound/audiotools:dvda - Enable DVD-Audio support
 media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
+media-sound/bluez-alsa:aptx - aptX (HD) over Bluetooth (many Android compatible headphones)
 media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
 media-sound/bluez-alsa:ldac - Enable support for AOSP media-libs/libldac dispatcher
 media-sound/bluez-alsa:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
