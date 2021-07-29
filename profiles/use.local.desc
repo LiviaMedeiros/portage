@@ -730,7 +730,6 @@ app-i18n/ibus-chewing:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus-handwrite:zinnia - Enable support for app-i18n/zinnia
 app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
-app-i18n/ibus-m17n:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/ibus-pinyin:boost - Enable support for dev-libs/boost
 app-i18n/ibus-sunpinyin:gui - Install graphical user interface tool (ibus-setup-sunpinyin)
 app-i18n/ibus-unikey:gtk2 - Enable support for x11-libs/gtk+:2
@@ -2015,6 +2014,7 @@ dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
+dev-libs/kosmindoormap:openinghours - Enable support for highlighting currently open amenities/shops/etc.
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/libbase58:tools - Build command line base58 tool
@@ -4111,6 +4111,7 @@ media-libs/gd:heif - Enable support for the heif format via media-libs/libheif
 media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
+media-libs/glfw:wayland-only - Enable wayland support and disable X11 support
 media-libs/gmmlib:custom-cflags - Do not override user CFLAGS like -march, -msse and similar with lib defaults. Not tested by upstream.
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
