@@ -624,6 +624,8 @@ app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-modules:pax-kernel - Apply patch needed for pax enabled kernels
 app-emulation/vkd3d:spirv-tools - Enable SPIRV shader debugging support using dev-util/spirv-tools
+app-emulation/wine-gecko:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
+app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
 app-emulation/wine-staging:capi - Enable ISDN support via CAPI
 app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -2044,7 +2046,6 @@ dev-libs/libevent:ssl - Support for dev-libs/openssl encryption
 dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:exec-static-trampoline - Don't rely on dynamic code generation for trampolines.
 dev-libs/libffi:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
-dev-libs/libffi:pax_kernel - DEPRECATED alias for 'pax-kernel'. Do not use.
 dev-libs/libffi-compat:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libfido2:nfc - Enable experimental NFC support
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
@@ -7065,7 +7066,6 @@ sci-biology/abyss:misc-haskell - build abyss-samtobreak tool, pull in haskell to
 sci-biology/bioperl:db - Install sci-biology/bioperl-run
 sci-biology/bioperl:network - Install sci-biology/bioperl-run
 sci-biology/bioperl:run - Install sci-biology/bioperl-run
-sci-biology/bowtie:tbb - Enables building bowtie with the Intel Threading Building Blocks from dev-cpp/tbb. This flag is recommended.
 sci-biology/clustalw-mpi:mpi-njtree - Use MPI (as opposed to serial) code for computing neighbor-joining trees
 sci-biology/clustalw-mpi:static-pairalign - Use static (as opposed to dynamic) scheduling for pair alignments
 sci-biology/exonerate:utils - Install all utilities
