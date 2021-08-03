@@ -187,7 +187,7 @@ www-servers/resin
 dev-ml/cstruct
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-18)
-# No gtk4 and friends in the tree yet
+# No dev-cpp/gtkmm:4 in the tree yet (Bug #801490)
 >=media-sound/easyeffects-6.0.0
 
 # Hans de Graaff <graaff@gentoo.org> (2021-07-18)
@@ -579,12 +579,6 @@ dev-java/werken-xpath
 # Masking until we can investigate & fix
 # bug #737406
 =media-fonts/culmus-0.133-r1
-
-# Lars Wendler <polynomial-c@gentoo.org> (2021-03-22)
-# On fast CPUs eautoreconf skips intermediate steps,
-# enables maintainer-mode or fails automake assertions:
-# bug #782985
-sys-devel/autoconf:2.71
 
 # Sam James <sam@gentoo.org> (2021-03-03)
 # Doesn't seem to sync clock correctly
