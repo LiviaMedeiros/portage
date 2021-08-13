@@ -2023,6 +2023,7 @@ dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/kosmindoormap:openinghours - Enable support for highlighting currently open amenities/shops/etc.
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
+dev-libs/leveldb:crc32c - Link against dev-libs/crc32c for accelerated CRC32C calculation
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcbor:custom-alloc - Custom, dynamically defined allocator support
@@ -6927,6 +6928,8 @@ net-wireless/bluez:test-programs - Install tools for testing of various Bluetoot
 net-wireless/bluez:user-session - Allow compatibility with user-session semantics for session bus under systemd
 net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/dump1090:bladerf - Build with Nuand BladeRF support
+net-wireless/dump1090:hackrf - Build with Great Scott Gadgets HackRF support
+net-wireless/dump1090:minimal - Exclude all HTML/webserver extras for a tiny build, e.g. to export data only
 net-wireless/dump1090:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
@@ -8190,7 +8193,6 @@ sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
 sys-fs/btrfsmaintenance:systemd - Enable systemd services and timers instead of cron timers
-sys-fs/cryfs:custom-optimization - Use user-defined compiler optimization level
 sys-fs/cryptmount:argv0switch - Default action given by progname.
 sys-fs/cryptmount:cswap - Enable support for encrypted swap.
 sys-fs/cryptmount:fsck - Check filesystems before mounting.
