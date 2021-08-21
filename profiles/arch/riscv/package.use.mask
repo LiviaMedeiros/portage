@@ -37,6 +37,7 @@ sys-auth/sssd test
 #  dev-db/mariadb fails tests here, see Bug #807995
 #  dev-db/mysql and dev-db/percona-server do not support this arch
 #  dev-db/mysql-cluster not tested yet, seriously outdated in the tree
+dev-python/mysqlclient test
 dev-python/pymysql test
 sci-libs/gdal mysql
 sys-cluster/slurm slurmdbd
@@ -138,8 +139,6 @@ dev-vcs/subversion kwallet
 kde-frameworks/purpose bluetooth
 #  - kde-plasma/bluedevil
 kde-plasma/plasma-meta bluetooth
-#  - media-sound/pavucontrol-qt
-lxqt-base/lxqt-panel pulseaudio
 #  - media-libs/dumb
 media-libs/allegro dumb
 #  - media-gfx/nvidia-texture-tools
@@ -148,12 +147,12 @@ media-libs/devil nvtt
 media-libs/libvpx doc
 #  - net-misc/ofono
 media-sound/pulseaudio ofono-headset
-#  - media-libs/vo-amrwbenc, media-libs/libbluray, media-libs/libbs2b, dev-libs/libcdio-paranoia,
-#    media-libs/chromaprint, media-libs/codec2, media-plugins/frei0r-plugins,
-#    media-libs/game-music-emu, media-libs/kvazaar, media-libs/aribb24, media-libs/libilbc,
-#    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/openh264, media-libs/rubberband,
-#    net-libs/srt, media-libs/vidstab, media-libs/xvid, media-libs/zimg, media-libs/zvbi
-media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 frei0r gme kvazaar libaribb24 libilbc libtesseract lv2 openh264 rubberband srt vidstab xvid zimg zvbi
+#  - media-libs/vo-amrwbenc, media-libs/libbs2b, dev-libs/libcdio-paranoia,
+#    media-libs/codec2, media-plugins/frei0r-plugins,
+#    media-libs/kvazaar, media-libs/libilbc,
+#    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/rubberband,
+#    media-libs/vidstab, media-libs/xvid, media-libs/zimg
+media-video/ffmpeg amrenc bs2b cdio codec2 frei0r kvazaar libilbc libtesseract lv2 rubberband vidstab xvid zimg
 #  - media-libs/libquicktime, media-libs/sdl-gfx
 media-video/mjpegtools quicktime sdlgfx
 #  - sys-cluster/ceph
