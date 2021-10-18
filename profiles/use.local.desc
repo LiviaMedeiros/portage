@@ -739,7 +739,6 @@ app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
 app-i18n/ibus-pinyin:boost - Enable support for dev-libs/boost
 app-i18n/ibus-sunpinyin:gui - Install graphical user interface tool (ibus-setup-sunpinyin)
-app-i18n/ibus-unikey:gtk2 - Enable support for x11-libs/gtk+:2
 app-i18n/im-chooser:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
@@ -6592,6 +6591,7 @@ net-misc/remmina:gvnc - Enable GVNC plugin using gtk-vnc, suitable for KVM and V
 net-misc/remmina:kwallet - Enable KDE Wallet plugin
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
 net-misc/remmina:ssh - Enable support for SSH/SFTP protocol
+net-misc/remmina:x2go - Enable support for X2Go
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rsync:system-zlib - Use system zlib instead of bundled one. This is incompatible with older rsync releases!
 net-misc/rsync:xxhash - Enable dev-libs/xxhash support for hashing
