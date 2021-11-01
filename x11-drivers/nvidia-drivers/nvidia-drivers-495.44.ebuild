@@ -7,7 +7,7 @@ MODULES_OPTIONAL_USE="driver"
 inherit desktop eapi8-dosym linux-mod multilib-build \
 	readme.gentoo-r1 systemd toolchain-funcs unpacker
 
-NV_KERNEL_MAX="5.14"
+NV_KERNEL_MAX="5.15"
 NV_URI="https://download.nvidia.com/XFree86/"
 
 DESCRIPTION="NVIDIA Accelerated Graphics Driver"
@@ -467,7 +467,7 @@ pkg_postinst() {
 	fi
 
 	if use wayland && [[ ${REPLACING_VERSIONS} ]] &&
-		ver_test ${REPLACING_VERSIONS} -lt 495.53.02; then
+		ver_test ${REPLACING_VERSIONS} -lt 495.29.05; then
 		elog
 		elog "While this version of ${PN} adds GBM support (allowing a wider"
 		elog "range of wayland compositors, such as sway), be warned it is very"
