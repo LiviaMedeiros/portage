@@ -37,7 +37,7 @@ MOZ_P="${MOZ_PN}-${MOZ_PV}"
 MOZ_PV_DISTFILES="${MOZ_PV}${MOZ_PV_SUFFIX}"
 MOZ_P_DISTFILES="${MOZ_PN}-${MOZ_PV_DISTFILES}"
 
-inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info \
+inherit autotools check-reqs desktop flag-o-matic gnome2-utils \
 	llvm multiprocessing pax-utils python-any-r1 toolchain-funcs \
 	virtualx xdg
 
@@ -55,9 +55,9 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}
 	${PATCH_URIS[@]}"
 
 DESCRIPTION="Thunderbird Mail Client"
-HOMEPAGE="https://www.mozilla.org/thunderbird"
+HOMEPAGE="https://www.thunderbird.net/"
 
-#KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 
 SLOT="0/$(ver_cut 1)"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
@@ -196,12 +196,6 @@ DEPEND="${CDEPEND}
 	x86? ( virtual/opengl )"
 
 S="${WORKDIR}/${PN}-${PV%_*}"
-
-# Allow MOZ_GMP_PLUGIN_LIST to be set in an eclass or
-# overridden in the enviromnent (advanced hackers only)
-if [[ -z "${MOZ_GMP_PLUGIN_LIST+set}" ]] ; then
-	MOZ_GMP_PLUGIN_LIST=( gmp-gmpopenh264 gmp-widevinecdm )
-fi
 
 llvm_check_deps() {
 	if ! has_version -b "sys-devel/clang:${LLVM_SLOT}" ; then
@@ -458,6 +452,34 @@ pkg_setup() {
 		# Build system is using /proc/self/oom_score_adj, bug #604394
 		addpredict /proc/self/oom_score_adj
 
+		if use pgo ; then
+			# Allow access to GPU during PGO run
+			local ati_cards mesa_cards nvidia_cards render_cards
+			shopt -s nullglob
+
+			ati_cards=$(echo -n /dev/ati/card* | sed 's/ /:/g')
+			if [[ -n "${ati_cards}" ]] ; then
+				addpredict "${ati_cards}"
+			fi
+
+			mesa_cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
+			if [[ -n "${mesa_cards}" ]] ; then
+				addpredict "${mesa_cards}"
+			fi
+
+			nvidia_cards=$(echo -n /dev/nvidia* | sed 's/ /:/g')
+			if [[ -n "${nvidia_cards}" ]] ; then
+				addpredict "${nvidia_cards}"
+			fi
+
+			render_cards=$(echo -n /dev/dri/renderD128* | sed 's/ /:/g')
+			if [[ -n "${render_cards}" ]] ; then
+				addpredict "${render_cards}"
+			fi
+
+			shopt -u nullglob
+		fi
+
 		if ! mountpoint -q /dev/shm ; then
 			# If /dev/shm is not available, configure is known to fail with
 			# a traceback report referencing /usr/lib/pythonN.N/multiprocessing/synchronize.py
@@ -485,10 +507,6 @@ pkg_setup() {
 		# Ensure we use C locale when building, bug #746215
 		export LC_ALL=C
 	fi
-
-	CONFIG_CHECK="~SECCOMP"
-	WARNING_SECCOMP="CONFIG_SECCOMP not set! This system will be unable to play DRM-protected content."
-	linux-info_pkg_setup
 }
 
 src_unpack() {
@@ -626,6 +644,7 @@ src_configure() {
 		--disable-install-strip \
 		--disable-strip \
 		--disable-updater \
+		--enable-js-shell \
 		--enable-official-branding \
 		--enable-release \
 		--enable-system-ffi \
