@@ -4,9 +4,10 @@
 EAPI=8
 
 if [[ "${PV}" != "9999" ]]; then
-	DIST_VERSION=2.04
+	# DIST_VERSION=2.04
 	DIST_AUTHOR=AMBA
 	inherit perl-module
+
 	KEYWORDS="~amd64"
 else
 	EGIT_REPO_URI="https://github.com/lab-measurement/Lab-Zhinst.git"
