@@ -621,12 +621,6 @@ net-libs/balde-markdown
 # Removal on 2021-12-09. Bug #819303.
 net-misc/ssh-chain
 
-# Michał Górny <mgorny@gentoo.org> (2021-11-08)
-# Blocked on LLVM 11.  Upstream does not handle adding support for new
-# LLVM or Python versions timely.  No reverse dependencies.
-# Removal on 2021-12-08.  Bug #822435.
-dev-python/llvmlite
-
 # Sam James <sam@gentoo.org> (2021-11-03)
 # Known issues with YAMA (kernel.yama.ptrace_scope=1) which is on by default
 # in at least the sys-kernel/gento-kernel kernel config.
@@ -651,10 +645,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 # Masked for erratic behaviour
 # https://bugs.exim.org/show_bug.cgi?id=2813
 =mail-mta/exim-4.95
-
-# John Helmert III <ajak@gentoo.org> (2021-09-29)
-# VM image data corruption bug, causing I/O errors in VMs. Bug #815379
-=app-emulation/qemu-6.1.0-r1
 
 # Mart Raudsepp <leio@gentoo.org> (2021-09-24)
 # Experimental split media-sound/pulseaudio packages, bug #536780.
