@@ -18,7 +18,8 @@ fi
 LICENSE="AGPL-3"
 SLOT="0"
 
-# Try again after 0.9.6
+# Try again after 1.0 (nearly there, but path-related issues)
+# https://github.com/rui314/mold/issues/137
 RESTRICT="test"
 
 RDEPEND=">=dev-cpp/tbb-2021.4.0:=
@@ -30,10 +31,12 @@ RDEPEND=">=dev-cpp/tbb-2021.4.0:=
 	)"
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-9999-build-respect-user-FLAGS.patch
-	"${FILESDIR}"/${PN}-9999-don-t-compress-man-page.patch
-)
+src_prepare() {
+	default
+
+	# Needs unpackaged dwarfdump
+	rm test/elf/{compress-debug-sections.sh,compressed-debug-info.sh} || die
+}
 
 src_compile() {
 	tc-export CC CXX
@@ -41,11 +44,7 @@ src_compile() {
 	emake \
 		SYSTEM_TBB=1 \
 		SYSTEM_MIMALLOC=1 \
-		EXTRA_CFLAGS="${CFLAGS}" \
-		EXTRA_CXXFLAGS="${CXXFLAGS}" \
-		EXTRA_CPPFLAGS="${CPPFLAGS}" \
-		EXTRA_LDFLAGS="${LDFLAGS}" \
-		STRIP="true"
+		STRIP="true" \
 		LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 }
 
@@ -53,12 +52,6 @@ src_test() {
 	emake \
 		SYSTEM_TBB=1 \
 		SYSTEM_MIMALLOC=1 \
-		EXTRA_CFLAGS="${CFLAGS}" \
-		EXTRA_CXXFLAGS="${CXXFLAGS}" \
-		EXTRA_CPPFLAGS="${CPPFLAGS}" \
-		EXTRA_LDFLAGS="${LDFLAGS}" \
-		LIBDIR="${EPREFIX}/usr/$(get_libdir)" \
-		STRIP="true"
 		check
 }
 
@@ -66,11 +59,8 @@ src_install() {
 	emake \
 		SYSTEM_TBB=1 \
 		SYSTEM_MIMALLOC=1 \
-		EXTRA_CFLAGS="${CFLAGS}" \
-		EXTRA_CXXFLAGS="${CXXFLAGS}" \
-		EXTRA_CPPFLAGS="${CPPFLAGS}" \
-		EXTRA_LDFLAGS="${LDFLAGS}" \
 		DESTDIR="${ED}" \
+		PREFIX="${EPREFIX}/usr" \
 		LIBDIR="${EPREFIX}/usr/$(get_libdir)" \
 		STRIP="true" \
 		install
