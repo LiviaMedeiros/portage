@@ -1213,7 +1213,6 @@ dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/langkit:shared - Build shared library
 dev-ada/langkit:static-pic - Build static library with pic code
-dev-ada/libadalang:shared - Build shared library
 dev-ada/libadalang:static-pic - Build static library with pic code
 dev-ada/libgpr:shared - Build shared library
 dev-ada/libgpr:static-pic - Build static library with pic code
@@ -2436,7 +2435,6 @@ dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/drf-yasg:validation - Enable swagger spec validation using swagger-spec-validator
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/elasticsearch-py:async - Add async support
-dev-python/gevent:events - Enables the gevent events system which is required by libraries that use gevent monkey patching. This adds dev-python/zope-event and dev-python/zope-interface as runtime dependencies.
 dev-python/hiredis:system-libs - Use dev-libs/hiredis from system
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
@@ -5551,11 +5549,6 @@ net-dns/knot:stats - Enable the server statistics module
 net-dns/knot:synthrecord - Enable the automatic forward/reverse records module
 net-dns/knot:utils - Install Knot utilities, such as kdig, kzonecheck, ...
 net-dns/knot:whoami - Enable the whoami response module
-net-dns/ldns-utils:dane - Enable DNS-based Authentication of Named Entities (DANE) support
-net-dns/ldns-utils:ecdsa - Enable ECDSA support
-net-dns/ldns-utils:ed25519 - Enable ED25519 support
-net-dns/ldns-utils:ed448 - Enable ED448 support
-net-dns/ldns-utils:gost - Enable GOST support
 net-dns/mydns:alias - Enable David Phillips aliasing
 net-dns/mydns:status - Enable the STATUS opcode to check server status
 net-dns/nsd:bind8-stats - Enables BIND8 like NSTATS and XSTATS
@@ -6556,7 +6549,6 @@ net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/olsrd:pud - Install the Node Position Update plugin
 net-misc/openntpd:constraints - Enable HTTPS TLS time constraint support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
-net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
 net-misc/openssh:hpn - Enable high performance ssh
 net-misc/openssh:ldns - Use LDNS for DNSSEC/SSHFP validation.
 net-misc/openssh:livecd - Enable root password logins for live-cd environment.
@@ -7525,6 +7517,8 @@ sci-mathematics/polymake:nauty - Build the extension for graph automorphism comp
 sci-mathematics/polymake:normaliz - Build the bundled extension for lattice computations using sci-mathematics/normaliz.
 sci-mathematics/polymake:ppl - Enable dev-libs/ppl interface for convex hull computations.
 sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/singular for ideal related computations.
+sci-mathematics/primecount:executable - Build the primecount CLI executable
+sci-mathematics/primesieve:executable - Build the primesieve CLI executable
 sci-mathematics/rstudio:server - Build and install the RStudio server
 sci-mathematics/singular:julia - Enables interface for Singular to julia
 sci-mathematics/singular:polymake - Enable the interface to TOPCOM
@@ -8306,7 +8300,7 @@ sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containi
 sys-fs/zfs:test-suite - Install regression test suite
 sys-fs/zfs-auto-snapshot:cron - Install /etc/cron.* files
 sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots of datasets with com.sun:auto-snapshot=true property set
-sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool containing rootfs
+sys-fs/zfs-kmod:rootfs - Pull dependencies and check kernel options required for root-on-zfs
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
 sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
