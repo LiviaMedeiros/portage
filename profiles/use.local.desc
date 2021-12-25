@@ -4213,6 +4213,7 @@ media-libs/libopenglrecorder:openh264 - Enable H.264 support using media-libs/op
 media-libs/libopenglrecorder:vpx - Enable VP8/VP9 codec support via media-libs/libvpx
 media-libs/libopenshot:opencv - Enable media-libs/opencv support
 media-libs/libpagemaker:tools - Build command line file format conversion tools
+media-libs/libpano13:suitesparse - Use Sparse Levenberg Marquardt algorithm instead of dense Levenberg Marquardt algorithm
 media-libs/libplacebo:glslang - Use dev-util/glslang to compile GLSL
 media-libs/libplacebo:lcms - Add support for color management via media-libs/lcms
 media-libs/libplacebo:shaderc - Use media-libs/shaderc to compile GLSL
@@ -7871,11 +7872,11 @@ sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using s
 sys-apps/systemd:homed - Enable portable home directories
 sys-apps/systemd:hostnamed-fallback - Enable setting hostname with networkd/hostnamed without polkit (requires running sys-apps/dbus-broker)
 sys-apps/systemd:http - Enable embedded HTTP server in journald
-sys-apps/systemd:hwdb - Enable support for the hardware database
 sys-apps/systemd:importd - Enable import daemon
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:nat - Enable support for network address translation in networkd
+sys-apps/systemd:openssl - Enable use of dev-libs/openssl
 sys-apps/systemd:pkcs11 - Enable PKCS#11 support for cryptsetup and homed
 sys-apps/systemd:pwquality - Enable password quality checking in homed
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
@@ -8264,7 +8265,6 @@ sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
 sys-fs/ecryptfs-utils:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
-sys-fs/eudev:hwdb - read vendor/device string database and add it to udev database
 sys-fs/eudev:kmod - enable module loading through libkmod
 sys-fs/eudev:rule-generator - install legacy rule generator rules and support scripts - note that the functionality within was dropped from sys-fs/udev as it is not stable in all cases; use at your own risk
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
