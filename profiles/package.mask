@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2022-01-19)
+# The following list of packages is still using EAPI 5
+# and has no reverse dependencies.
+# Removal on 2022-02-18.
+dev-java/ecj-gcj
+dev-java/freehep-graphicsio-tests
+dev-java/freehep-graphicsio
+dev-java/freehep-graphics2d
+dev-java/colt
+
+# James Beddek <telans@posteo.de> (2022-01-19)
+# FFmpeg 5.0 ABI/API changes break many packages.
+# Masking for tracker/tinderbox.
+>=media-video/ffmpeg-5.0
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2022-01-18)
 # KDE Release Service 5.23.90 (5.24 Beta) mask - pre-release version
 # See also: https://kde.org/announcements/plasma/5/5.23.90/
@@ -331,20 +346,6 @@ x11-misc/3ddesktop
 # Package is broken and obsolete.
 # Removal on 2022-02-01.  Bug #464364.
 x11-misc/habak
-
-# Piotr Karbowski <slashbeast@gentoo.org> (2021-12-19)
-# No package depends on those bindings anymore.
-# Removal in 30 days.
-dev-python/pytaglib
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-12-19)
-# Outdated and not needed anymore (this was a releng workaround)
-# Removal in 30 days, please compile it yourself from app-emulation/qemu
-app-emulation/qemu-riscv64-bin
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-19)
-# Package without consumers. Bug #771693 (multiple CVEs). Removal in 30 days.
-dev-java/jackson
 
 # Mart Raudsepp <leio@gentoo.org> (2021-12-18)
 # GNOME 42 mask
