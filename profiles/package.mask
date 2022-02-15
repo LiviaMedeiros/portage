@@ -33,88 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2022-02-14)
-# KDE Frameworks 5.91.0 mask - untested
-~kde-frameworks/frameworkintegration-5.91.0
-~kde-frameworks/attica-5.91.0
-~kde-frameworks/bluez-qt-5.91.0
-~kde-frameworks/breeze-icons-5.91.0
-~kde-frameworks/breeze-icons-rcc-5.91.0
-~kde-frameworks/extra-cmake-modules-5.91.0
-~kde-frameworks/kapidox-5.91.0
-~kde-frameworks/karchive-5.91.0
-~kde-frameworks/kcalendarcore-5.91.0
-~kde-frameworks/kcodecs-5.91.0
-~kde-frameworks/kconfig-5.91.0
-~kde-frameworks/kcoreaddons-5.91.0
-~kde-frameworks/kdbusaddons-5.91.0
-~kde-frameworks/kdnssd-5.91.0
-~kde-frameworks/kguiaddons-5.91.0
-~kde-frameworks/kholidays-5.91.0
-~kde-frameworks/ki18n-5.91.0
-~kde-frameworks/kidletime-5.91.0
-~kde-frameworks/kirigami-5.91.0
-~kde-frameworks/kitemmodels-5.91.0
-~kde-frameworks/kitemviews-5.91.0
-~kde-frameworks/kplotting-5.91.0
-~kde-frameworks/kquickcharts-5.91.0
-~kde-frameworks/kwayland-5.91.0
-~kde-frameworks/kwidgetsaddons-5.91.0
-~kde-frameworks/kwindowsystem-5.91.0
-~kde-frameworks/modemmanager-qt-5.91.0
-~kde-frameworks/networkmanager-qt-5.91.0
-~kde-frameworks/oxygen-icons-5.91.0
-~kde-frameworks/prison-5.91.0
-~kde-frameworks/qqc2-desktop-style-5.91.0
-~kde-frameworks/solid-5.91.0
-~kde-frameworks/sonnet-5.91.0
-~kde-frameworks/syntax-highlighting-5.91.0
-~kde-frameworks/threadweaver-5.91.0
-~kde-frameworks/kactivities-5.91.0
-~kde-frameworks/kauth-5.91.0
-~kde-frameworks/kcompletion-5.91.0
-~kde-frameworks/kcontacts-5.91.0
-~kde-frameworks/kcrash-5.91.0
-~kde-frameworks/kdoctools-5.91.0
-~kde-frameworks/kfilemetadata-5.91.0
-~kde-frameworks/kimageformats-5.91.0
-~kde-frameworks/kjobwidgets-5.91.0
-~kde-frameworks/knotifications-5.91.0
-~kde-frameworks/kpackage-5.91.0
-~kde-frameworks/kpeople-5.91.0
-~kde-frameworks/kpty-5.91.0
-~kde-frameworks/kunitconversion-5.91.0
-~kde-frameworks/syndication-5.91.0
-~kde-frameworks/baloo-5.91.0
-~kde-frameworks/kactivities-stats-5.91.0
-~kde-frameworks/kbookmarks-5.91.0
-~kde-frameworks/kcmutils-5.91.0
-~kde-frameworks/kconfigwidgets-5.91.0
-~kde-frameworks/kdav-5.91.0
-~kde-frameworks/kdeclarative-5.91.0
-~kde-frameworks/kded-5.91.0
-~kde-frameworks/kdesu-5.91.0
-~kde-frameworks/kemoticons-5.91.0
-~kde-frameworks/kglobalaccel-5.91.0
-~kde-frameworks/kiconthemes-5.91.0
-~kde-frameworks/kinit-5.91.0
-~kde-frameworks/kio-5.91.0
-~kde-frameworks/knewstuff-5.91.0
-~kde-frameworks/knotifyconfig-5.91.0
-~kde-frameworks/kparts-5.91.0
-~kde-frameworks/krunner-5.91.0
-~kde-frameworks/kservice-5.91.0
-~kde-frameworks/ktexteditor-5.91.0
-~kde-frameworks/ktextwidgets-5.91.0
-~kde-frameworks/kwallet-5.91.0
-~kde-frameworks/kxmlgui-5.91.0
-~kde-frameworks/plasma-5.91.0
-~kde-frameworks/purpose-5.91.0
-~kde-frameworks/countryflags-5.91.0
-~kde-frameworks/kdelibs4support-5.91.0
-~kde-frameworks/khtml-5.91.0
-~kde-frameworks/kjs-5.91.0
-~kde-frameworks/kross-5.91.0
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-02-15)
+# Java libraries without consumers. Removal in 30 days.
+dev-java/upnplib
+dev-java/apple-java-extensions-bin
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-02-13)
+# This package is completely broken and some libraries existing only for
+# it cause unneeded workload for Java team. Removal in 30 days.
+# Bug #831106, bug #784107.
+games-strategy/triplea
 
 # Matthew Smith <matthew@gentoo.org> (2022-02-13)
 # Dead upstream, incompatible with newer versions of makeself.
@@ -271,34 +199,6 @@ dev-java/colt
 # Masking for tracker/tinderbox.
 >=media-video/ffmpeg-5.0
 
-# David Seifert <soap@gentoo.org> (2022-01-16)
-# Most of these packages have been merged into sys-cluster/rdma-core and
-# have long been dead and unmaintained.
-# Removal in 30 days, bug #830999.
-sys-fabric/ibacm
-sys-fabric/infiniband-diags
-sys-fabric/infinipath-psm
-sys-fabric/libcxgb3
-sys-fabric/libcxgb4
-sys-fabric/libehca
-sys-fabric/libibcm
-sys-fabric/libibmad
-sys-fabric/libibumad
-sys-fabric/libibverbs
-sys-fabric/libipathverbs
-sys-fabric/libmlx4
-sys-fabric/libmlx5
-sys-fabric/libmthca
-sys-fabric/libnes
-sys-fabric/libocrdma
-sys-fabric/librdmacm
-sys-fabric/ofed
-sys-fabric/rds-tools
-sys-fabric/srptools
-<sys-fabric/opensm-3.3.23
-<sys-fabric/perftest-4.4.0.37
-<sys-fabric/qperf-0.4.11
-
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-01-15)
 # Last branch update happened ~ 12 month ago.
 # Maximum kernel supported is 5.9, which we no longer package.
@@ -308,14 +208,6 @@ sys-fabric/srptools
 # Bug: https://bugs.gentoo.org/830020
 ~sys-fs/zfs-0.8.6
 ~sys-fs/zfs-kmod-0.8.6
-
-# Marco Genasci <fedeliallalinea@gmail.com> (2022-01-15)
-# Removed in favor of unified package dev-db/oracle-instantclient
-# Removal on 2022-02-15. Bug #589146
-dev-db/oracle-instantclient-basic
-dev-db/oracle-instantclient-jdbc
-dev-db/oracle-instantclient-odbc
-dev-db/oracle-instantclient-sqlplus
 
 # Ulrich Müller <ulm@gentoo.org> (2022-01-15)
 # Pretest versions, masked for testing.
