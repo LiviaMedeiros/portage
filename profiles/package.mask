@@ -33,6 +33,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-02-27)
+# EAPI=6 consumer of deprecated cmake-utils.eclass. No reverse
+# dependencies and will soon be unbuildable with new CMake.
+# bug #774495. Dead HOMEPAGE. Removal on 2022-03-27.
+dev-libs/smack
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2022-02-27)
+# Outdated, fails to build with glibc-2.34, bug 806755
+# Has been integrated into net-fs/nfs-utils, please use that instead.
+# Removal in 30 days.
+net-libs/libnfsidmap
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-02-27)
+# No revdeps since begin of gentoo.git history, outdated and unmaintained.
+# Bug #834307. Removal on 2022-03-29.
+x11-libs/libyui
+x11-libs/libyui-gtk
+x11-libs/libyui-ncurses
+x11-libs/libyui-qt
+
+# Fabian Groffen <grobian@gentoo.org> (2022-02-27)
+# Masked for removal, needs updates, significant amount of work, no
+# Clang toolchain available to test with
+# Removal on 2022-03-29.  Bug #834306
+sys-libs/tapi
+
 # Michał Górny <mgorny@gentoo.org> (2022-02-26)
 # The original Midori browser has been discontinued, and the new
 # Electron-based "Midori" (sic!) does not seem worth the effort
@@ -279,11 +305,6 @@ x11-plugins/purple-facebook
 # Doesn't work with LLVM 13 yet; mask to help
 # Blender compatibility (no mixed LLVM versions).
 =media-libs/osl-1.12*
-
-# Hans de Graaff <graaff@gentoo.org> (2021-11-26)
-# Mask new rubygems version for testing. This version uses a new
-# gentoo-defaults profile, bug #789957
->=dev-ruby/rubygems-3.2.31
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-23)
 # Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
