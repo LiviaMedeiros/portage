@@ -287,6 +287,8 @@ app-cdr/cdemu:cdemu-daemon - Pull app-cdr/cdemu-daemon dependency, useful in chr
 app-cdr/dvdisaster:debug - Enable memory debugging.
 app-cdr/gaffitter:scripts - Install additional gaffitter scripts for external programs
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
+app-containers/apptainer:network - Install network plug-ins
+app-containers/apptainer:suid - Install SUID helper binary
 app-containers/containerd:apparmor - Support for AppArmor
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
@@ -313,6 +315,7 @@ app-containers/lxd:apparmor - Enable AppArmor support
 app-containers/podman:apparmor - Enable AppArmor support.
 app-containers/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/podman:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
+app-containers/podman:init - Enables catatonit dependency required for podman run --init.
 app-containers/podman:rootless - Enables dependencies for running in rootless mode.
 app-containers/runc:apparmor - Enable AppArmor support.
 app-containers/runc:kmem - Enable Kernel Memory Accounting.
@@ -2300,7 +2303,6 @@ dev-lisp/cmucl:X - Build CLX, CLM, or Hemlock
 dev-lisp/cmucl:doc - Installs package documentation
 dev-lisp/cmucl:source - Include source code for CMUCL in installation
 dev-lisp/ecls:gengc - Use generational garbage collection (experimental)
-dev-lisp/ecls:libatomic - Use dev-libs/libatomic_ops library
 dev-lisp/ecls:precisegc - Use type information during garbage collection (experimental)
 dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
@@ -3085,6 +3087,7 @@ games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
 games-emulation/ppsspp:discord - Enable interfacing with a locally running Discord desktop client
 games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled
+games-emulation/snes9x:glslang - Build support for slang-type shaders
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/vbam:link - Enable GBA linking functionality
@@ -3096,6 +3099,7 @@ games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/love:gme - Use media-libs/game-music-emu to support additional music formats
 games-engines/odamex:client - Build client target
+games-engines/odamex:hidpi - Use bundled FLTK 1.4, which has better support for HiDPI screens
 games-engines/odamex:master - Build master server target (advertises odamex server list)
 games-engines/odamex:odalaunch - Build the wxWidgets based launcher
 games-engines/odamex:portmidi - Enable PortMidi support
@@ -3887,6 +3891,7 @@ media-fonts/fira-sans:otf - Install the OpenType version of the font
 media-fonts/fira-sans:ttf - Install the TrueType version of the font
 media-fonts/fontawesome:otf - Install the OpenType version of the font
 media-fonts/fontawesome:ttf - Install the TrueType version of the font
+media-fonts/fonts-meta:emoji - Install a font supporting emojis
 media-fonts/fonts-meta:free - Install fonts for the "free" preset
 media-fonts/fonts-meta:latin - Install additional latin fonts
 media-fonts/fonts-meta:ms - Install (free) fonts for the "ms" preset
@@ -8803,9 +8808,7 @@ x11-libs/libva:drm - Enables VA/DRM API support.
 x11-libs/libva:utils - Install VA-API utility programs.
 x11-libs/libva-compat:drm - Enables VA/DRM API support.
 x11-libs/libva-compat:egl - Enables EGL support.
-x11-libs/libva-intel-media-driver:custom-cflags - Do not override user CFLAGS like -02, -march, -msse and similar with lib defaults. Not tested by upstream.
 x11-libs/libva-intel-media-driver:redistributable - Install redistributable media kernel binaries (no source code) files (primarily needed for video encoding support)
-x11-libs/libva-intel-media-driver:set-as-default - Override libva automatic driver selection and set this (iHD) driver as default one.
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/libxkbcommon:tools - Build the xkbcli tools
