@@ -2259,7 +2259,6 @@ dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
 dev-libs/totem-pl-parser:crypt - Support AmazonAMZ decoding with dev-libs/libgcrypt
 dev-libs/totem-pl-parser:uchardet - Enable charset discovery via app-i18n/uchardet
-dev-libs/tree-sitter:ts-cli - Build Tree-sitter CLI tool (for developing, testing, and using Tree-sitter parsers)
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
@@ -7785,7 +7784,6 @@ sys-apps/flashrom:serprog - Enable Serial Flasher programmer
 sys-apps/flashrom:stlinkv3-spi - Enable SPI programmer using STLINK-V3
 sys-apps/flashrom:tools - Install ich_descriptor_tool, a tool for reading descriptor-mode SPI-flash images for Intel chipsets
 sys-apps/flashrom:usbblaster-spi - Enable support for Altera USB-Blaster dongles
-sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:archive - Use app-arch/libarchive for archives support
 sys-apps/fwupd:dell - Enable Dell-specific support
