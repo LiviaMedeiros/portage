@@ -38,14 +38,6 @@ REQUIRED_USE="cxx? ( sasl )
 
 S=${WORKDIR}/${PN}-OPENLDAP_REL_ENG_${MY_PV}
 
-# always list newer first
-# Do not add any AGPL-3 BDB here!
-# See bug 525110, comment 15.
-# Advanced usage: OPENLDAP_BDB_SLOTS in the environment can be used to force a slot during build.
-BDB_SLOTS="${OPENLDAP_BDB_SLOTS:=5.3 4.8}"
-BDB_PKGS=''
-for _slot in $BDB_SLOTS; do BDB_PKGS="${BDB_PKGS} sys-libs/db:${_slot}" ; done
-
 # openssl is needed to generate lanman-passwords required by samba
 COMMON_DEPEND="
 	ssl? (
@@ -144,6 +136,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.1-cloak.patch
 	"${FILESDIR}"/${PN}-2.6.1-flags.patch
 	"${FILESDIR}"/${PN}-2.6.1-fix-missing-mapping.patch
+	"${FILESDIR}"/${PN}-2.6.1-make-flags.patch
+	"${FILESDIR}"/${PN}-2.6.1-fix-bashism-configure.patch
 )
 
 openldap_filecount() {
@@ -228,6 +222,7 @@ openldap_find_versiontags() {
 	[[ "${have_files}" == "1" ]] && einfo "DB files present" || einfo "No DB files present"
 
 	# Now we must check for the major version of sys-libs/db linked against.
+	# TODO: remove this as we dropped bdb support (gone upstream) in 2.6.1?
 	SLAPD_PATH="${EROOT}/usr/$(get_libdir)/openldap/slapd"
 	if [[ "${have_files}" == "1" ]] && [[ -f "${SLAPD_PATH}" ]]; then
 		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
@@ -514,7 +509,7 @@ src_configure_cxx() {
 
 multilib_src_compile() {
 	tc-export AR CC CXX
-	emake CC=$(tc-getCC) SHELL="${EPREFIX}"/bin/sh
+	emake CC="$(tc-getCC)" SHELL="${EPREFIX}"/bin/sh
 
 	if ! use minimal && multilib_is_native_abi ; then
 		if use cxx ; then
@@ -553,7 +548,7 @@ multilib_src_compile() {
 
 			emake \
 				LDAP_BUILD="${BUILD_DIR}" \
-				CC=$(tc-getCC) libexecdir="${EPREFIX}"/usr/$(get_libdir)/openldap
+				CC="$(tc-getCC)" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap"
 			popd &>/dev/null || die
 		fi
 
@@ -615,7 +610,7 @@ multilib_src_test() {
 }
 
 multilib_src_install() {
-	emake CC=$(tc-getCC) \
+	emake CC="$(tc-getCC)" \
 		DESTDIR="${D}" SHELL="${EPREFIX}"/bin/sh install
 
 	if ! use minimal && multilib_is_native_abi; then
@@ -732,8 +727,6 @@ multilib_src_install() {
 	if ! use static-libs ; then
 		find "${ED}" \( -name '*.a' -o -name '*.la' \) -delete || die
 	fi
-
-	rmdir "${ED}/run" || die
 }
 
 multilib_src_install_all() {
@@ -787,9 +780,6 @@ pkg_postinst() {
 		elog "Getting started using OpenLDAP? There is some documentation available:"
 		elog "Gentoo Guide to OpenLDAP Authentication"
 		elog "(https://wiki.gentoo.org/wiki/Centralized_authentication_using_OpenLDAP)"
-		elog "---"
-		elog "An example file for tuning BDB backends with openldap is"
-		elog "DB_CONFIG.fast.example in /usr/share/doc/${PF}/"
 	fi
 
 	preserve_old_lib_notify /usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.4$(get_libname 0)
