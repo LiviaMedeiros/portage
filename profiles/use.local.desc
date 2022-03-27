@@ -2702,6 +2702,9 @@ dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
 dev-ruby/ruby-sdl:sge - Enable sdl-sge support
 dev-ruby/rubygems:server - Install support for the rubygems server
 dev-ruby/vcr:json - Add support for casettes serialized with JSON
+dev-scheme/bigloo:avahi - Enable Avahi support
+dev-scheme/bigloo:gpg - Enable GPG support
+dev-scheme/bigloo:libuv - Enable libuv support
 dev-scheme/gauche:mbedtls - Enable support for net-libs/mbedtls
 dev-scheme/gauche-gl:cg - Enable NVidia Cg binding
 dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
@@ -7432,6 +7435,8 @@ sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
 sci-libs/proj:europe - Install the PROJ collection of European grids and init-files
 sci-libs/rocBLAS:benchmark - Build and install rocblas-bench.
 sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS.
+sci-libs/rocFFT:benchmark - Build and install [dyna-]rocfft-rider.
+sci-libs/rocFFT:perfscripts - Install rocfft-perf performance visualization suite.
 sci-libs/rocPRIM:benchmark - Build and install benchmark programs.
 sci-libs/rocRAND:benchmark - Build and install benchmark programs.
 sci-libs/rocSOLVER:benchmark - Build and install rocsolver-bench.
