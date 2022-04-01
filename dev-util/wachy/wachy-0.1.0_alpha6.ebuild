@@ -105,7 +105,10 @@ inherit cargo
 DESCRIPTION="A dynamic tracing profiler for Linux"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
-HOMEPAGE="https://github.com/rubrikinc/wachy"
+HOMEPAGE="
+	https://rubrikinc.github.io/wachy/
+	https://github.com/rubrikinc/wachy
+"
 SRC_URI="
 	https://github.com/rubrikinc/${PN}/archive/refs/tags/${PV/_alpha/-alpha.}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris ${CRATES})
@@ -114,7 +117,7 @@ S=${WORKDIR}/${PN}-${PV/_alpha/-alpha.}
 
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSL-1.0 MIT Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 MIT Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
