@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{8,9,10} )
 
-inherit cmake gnome2-utils python-single-r1
+inherit cmake gnome2-utils python-single-r1 udev
 
 DESCRIPTION="Universal Software Radio Peripheral (USRP) Hardware Driver"
 HOMEPAGE="https://kb.ettus.com"
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/EttusResearch/uhd/archive/v${PV}.tar.gz -> EttusRese
 
 LICENSE="GPL-3"
 SLOT="0/$(ver_cut 1-3)"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~riscv ~x86"
 IUSE="+b100 +b200 doc e300 examples +mpmd octoclock +n230 test +usb +usrp1 +usrp2 +utils +x300"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
@@ -98,8 +98,7 @@ src_install() {
 		rm -r "${ED}/usr/bin/uhd_images_downloader" || die
 	fi
 
-	insinto /lib/udev/rules.d/
-	doins "${S}/utils/uhd-usrp.rules"
+	udev_dorules "${S}/utils/uhd-usrp.rules"
 
 	rm -r "${WORKDIR}/images/winusb_driver" || die
 	if ! use b100; then

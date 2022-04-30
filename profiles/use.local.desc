@@ -480,6 +480,7 @@ app-emacs/org-mode:odt-schema - Install non-free schema files for OpenDocument T
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
 app-emacs/remember:planner - Include support for app-emacs/planner
 app-emacs/slime:xref - Install xref.lisp cross-referencing tool
+app-emacs/sly:xref - Install xref.lisp cross-referencing tool
 app-emacs/vm:bbdb - Include support for app-emacs/bbdb
 app-emacs/wanderlust:bbdb - Include support for app-emacs/bbdb
 app-emacs/wikipedia-mode:outline-magic - Enable support for outline-mode extensions (app-emacs/outline-magic)
@@ -631,6 +632,7 @@ app-emulation/virt-manager:sasl - Depend on the proper libraries needed to conne
 app-emulation/virt-viewer:libvirt - Support connecting to virtual machines managed by libvirt.
 app-emulation/virt-viewer:spice - Support connecting to SPICE-enabled virtual machines.
 app-emulation/virt-viewer:vnc - Support connecting to VNC-enabled virtual machines.
+app-emulation/virt-viewer:vte - Enable terminal support (x11-libs/vte) in the GTK+ interface
 app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
 app-emulation/virtualbox:dtrace - Install dtrace Extension Pack
 app-emulation/virtualbox:headless - Build without any graphic frontend
@@ -1862,6 +1864,7 @@ dev-lang/vala:valadoc - Installs valadoc documentation generation tool
 dev-lang/xsb:mariadb - Enable support for the mariadb database backend
 dev-lang/yap:R - Enable support for connecting R to Prolog
 dev-lang/yap:raptor - Enable support for Raptor RDF syntax libarary
+dev-lang/zig:stage2 - Install stage2 alongside stage1
 dev-libs/aml:examples - Build and install examples
 dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/appstream:apt - Enables Debians APT support
@@ -2061,6 +2064,7 @@ dev-libs/libevent:mbedtls - Support for net-libs/mbedtls encryption
 dev-libs/libevent:ssl - Support for dev-libs/openssl encryption
 dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:exec-static-trampoline - Don't rely on dynamic code generation for trampolines.
+dev-libs/libffi:experimental-loong - Add experimental LoongArch patchset
 dev-libs/libffi:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libffi-compat:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libfido2:nfc - Enable experimental NFC support
@@ -2229,6 +2233,7 @@ dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
+dev-libs/thrift:libevent - Build support for dev-libs/libevent
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
@@ -4175,7 +4180,7 @@ media-libs/imlib2:X - Use the X window system
 media-libs/imlib2:bzip2 - Bzip2 loader support
 media-libs/imlib2:eps - Eps image loader support
 media-libs/imlib2:gif - Gif image loader support
-media-libs/imlib2:heif - Hief and Avif image loader support
+media-libs/imlib2:heif - Heif and Avif image loader support
 media-libs/imlib2:jpeg - Jpeg image loader support
 media-libs/imlib2:jpegxl - Jxl image loader support
 media-libs/imlib2:mp3 - ID3 loader support
@@ -5964,10 +5969,10 @@ net-irc/ngircd:strict-rfc - Strict RFC compliance; may harm compatibility
 net-irc/psybnc:multinetwork - Adds support for multiple networks
 net-irc/psybnc:oidentd - Adds support for oidentd
 net-irc/psybnc:scripting - Adds scripting support
-net-irc/quassel:X - Build the Qt5 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
 net-irc/quassel:bundled-icons - Use icon themes bundled with Quassel, rather than depending on system packages.
 net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish encryption via app-crypt/qca SLOT 2.
 net-irc/quassel:dbus - Support desktop notifications via the StatusNotifier D-Bus service (used by most modern desktop environments).
+net-irc/quassel:gui - Build the Qt5 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
 net-irc/quassel:monolithic - Build standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use Quassel's client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
 net-irc/quassel:oxygen - Support the Oxygen icon set that was the default for KDE4.
 net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
@@ -7045,6 +7050,7 @@ net-wireless/uhd:usrp1 - support USRP1 hardware
 net-wireless/uhd:usrp2 - support USRP2, N200, N210 hardware
 net-wireless/uhd:utils - utilities needed to list, query, calibrate, or update FPGA/Firmware
 net-wireless/uhd:x300 - support X300, X310 hardware
+net-wireless/unifi:system-mongodb - Using dev-db/mongodb systemd service instead of the bundled one
 net-wireless/urh:airspy - use native backend which directly uses net-wireless/airspy
 net-wireless/urh:audio - use a soundcard instead of an sdr
 net-wireless/urh:bladerf - use native backend which directly uses net-wireless/bladerf
@@ -7767,6 +7773,7 @@ sys-apps/flashrom:tools - Install ich_descriptor_tool, a tool for reading descri
 sys-apps/flashrom:usbblaster-spi - Enable support for Altera USB-Blaster dongles
 sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:archive - Use app-arch/libarchive for archives support
+sys-apps/fwupd:cbor - Enable CBOR support for coSWID and uSWID via dev-libs/libcbor
 sys-apps/fwupd:dell - Enable Dell-specific support
 sys-apps/fwupd:fastboot - Build and install fastboot plugin
 sys-apps/fwupd:flashrom - Enable flashrom plugin via sys-apps/flashrom
@@ -8399,6 +8406,7 @@ sys-libs/libomp:cuda - Build CUDA offloading plugin (only with USE=offload)
 sys-libs/libomp:hwloc - Enable CPU affinity support via hwloc
 sys-libs/libomp:offload - Support offloading OpenMP using libomptarget
 sys-libs/libomp:ompt - Enable OpenMP Tools Interface support
+sys-libs/libseccomp:experimental-loong - Add experimental LoongArch patchset
 sys-libs/libselinux:pcre2 - Use dev-libs/libpcre2 for fcontext regexes
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
