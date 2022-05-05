@@ -7532,6 +7532,7 @@ sci-mathematics/maxima:vtk - Support plotting with sci-libs/vtk
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
+sci-mathematics/octave:json - Allow using jsonencode and jsondecode commands via dev-libs/rapidjson
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
@@ -8048,11 +8049,13 @@ sys-cluster/ceph:kafka - Rados Gateway's pubsub support for Kafka push endpoint
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
 sys-cluster/ceph:numa - Use sys-process/numactl for numa support in rocksdb
+sys-cluster/ceph:parquet - Support for s3 select on parquet objects
 sys-cluster/ceph:pmdk - Enable PMDK libraries
 sys-cluster/ceph:rabbitmq - Use rabbitmq-c to build rgw amqp push endpoint
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/ceph:rbd-rwl - Enable librbd persistent write back cache
 sys-cluster/ceph:rbd-ssd - Enable librbd persistent write back cache for SSDs
+sys-cluster/ceph:rdma - Enable RDMA support via sys-cluster/rdma-core
 sys-cluster/ceph:rgw-lua - Rados Gateway's support for dynamically adding lua packagess
 sys-cluster/ceph:spdk - Enable SPDK user-mode storage driver toolkit
 sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled one
