@@ -44,6 +44,7 @@ DEPEND="${PYTHON_DEPS}
 	media-libs/lcms:2
 	media-libs/libcdr
 	media-libs/libfreehand
+	media-libs/libjpeg-turbo:=
 	media-libs/libpagemaker
 	media-libs/libpng:0=
 	media-libs/libvisio
@@ -51,7 +52,6 @@ DEPEND="${PYTHON_DEPS}
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
-	virtual/jpeg:0=
 	x11-libs/cairo[X,svg]
 	boost? ( dev-libs/boost:= )
 	graphicsmagick? ( media-gfx/graphicsmagick:= )
