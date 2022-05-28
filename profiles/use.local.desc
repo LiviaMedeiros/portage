@@ -6427,7 +6427,6 @@ net-misc/dropbear:multicall - Build all the programs as one little binary (to sa
 net-misc/dropbear:shadow - Enable shadow password support
 net-misc/dropbox-cli:gpg - Use app-crypt/gpgme to verify signatures
 net-misc/electron-cash:amodem - Enable plugin to support Audio Modem
-net-misc/electron-cash:audio_modem - Deprecated name for amodem
 net-misc/electron-cash:cli - Enables the CLI interface
 net-misc/electron-cash:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
 net-misc/electron-cash:digitalbitbox - Enable plugin to support Digital Bitbox hardware wallet
@@ -6805,6 +6804,7 @@ net-p2p/transmission:lightweight - Optimize transmission for low-resource system
 net-p2p/transmission:mbedtls - Use mbed TLS instead of OpenSSL
 net-p2p/transmission:web - Build Web client
 net-p2p/transmission-remote-gtk:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration.
+net-print/cups:openssl - Use dev-libs/openssl instead of net-libs/gnutls for TLS support
 net-print/cups-filters:foomatic - Build the included foomatic-rip printer driver. Strongly recommended.
 net-print/cups-filters:pclm - Enable PCLm support
 net-print/dymo-cups-drivers:usb-modeswitch - Include usb_modeswitch for some hardware (bug #601242)
@@ -7260,7 +7260,9 @@ sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
 sci-libs/ceres-solver:schur - Enable fixed-size schur specializations (disable if binary size is an issue)
 sci-libs/ceres-solver:sparse - Enable support for sparse matrix algebra with various packages from SuiteSparse
+sci-libs/cgnslib:base-scope - Enable base scoped families or connectivities
 sci-libs/cgnslib:legacy - Enable or disable building legacy code (3.0 compatible)
+sci-libs/cgnslib:scoping - Enable scoping of enumeration values
 sci-libs/cgnslib:tools - A number of utility programs: cgnscheck, cgnscompress, cgnsdiff, cgnslist, cgnsnames, cgnsupdate, cgnsconvert, adf2hdf, hdf2adf.
 sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-libs/cholmod:matrixops - Support basic sparse and dense matrix operations (add, multiply, scale, et cetera)
@@ -7824,6 +7826,7 @@ sys-apps/iproute2:elf - support loading eBPF programs from ELFs (e.g. LLVM's eBP
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/iproute2:libbsd - Use dev-libs/libbsd instead of internal funcs
 sys-apps/iproute2:minimal - only install ip and tc programs, without eBPF support
+sys-apps/iproute2:nfs - Support RPC lookups via net-libs/libtirpc in ss
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/irqbalance:tui - Enable build of irqbalance terminal user interface
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
