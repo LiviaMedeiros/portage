@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>polynomial-c@gentoo.org</email>
-		<name>Lars Wendler</name>
+		<email>concord@gentoo.org</email>
+		<name>Kenton Groombridge</name>
 	</maintainer>
 	<use>
 		<flag name="g15">Enable support for the Logitech G15 LCD (and compatible devices).</flag>
