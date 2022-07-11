@@ -86,6 +86,7 @@ src_configure() {
 		-DENABLE_OCTOCLOCK="$(usex octoclock)"
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 		-DPKG_DOC_DIR="${EPREFIX}/usr/share/doc/${PF}"
+		-DUHD_VERSION="${PV}"
 	)
 	cmake_src_configure
 }
@@ -96,6 +97,10 @@ src_install() {
 	use utils && python_fix_shebang "${ED}"/usr/$(get_libdir)/${PN}/utils/
 	if [[ "${PV}" != "9999" ]]; then
 		rm -r "${ED}/usr/bin/uhd_images_downloader" || die
+	fi
+	# do not install test files (bug #857492)
+	if use test; then
+		rm "${ED}/usr/lib64/${PN}/tests" -R || die
 	fi
 
 	udev_dorules "${S}/utils/uhd-usrp.rules"
@@ -129,4 +134,12 @@ src_install() {
 	fi
 	insinto /usr/share/${PN}
 	doins -r "${WORKDIR}/images"
+}
+
+pkg_postinst() {
+	udev_reload
+}
+
+pkg_postrm() {
+	udev_reload
 }
