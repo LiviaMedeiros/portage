@@ -94,6 +94,7 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.8.3-docgen_deps_test.patch
+	"${FILESDIR}"/${PN}-1.8.3-gresource_quirks_paths.patch
 )
 
 pkg_setup() {
@@ -106,6 +107,7 @@ pkg_setup() {
 
 src_prepare() {
 	default
+
 	# c.f. https://github.com/fwupd/fwupd/issues/1414
 	sed -e "/test('thunderbolt-self-test', e, env: test_env, timeout : 120)/d" \
 		-i plugins/thunderbolt/meson.build || die
@@ -117,6 +119,8 @@ src_prepare() {
 		-i data/builder/meson.build || die
 	sed -e "/install_dir.*'doc'/s/doc/gtk-doc/" \
 		-i docs/meson.build || die
+
+	python_fix_shebang "${S}"/contrib/*.py
 }
 
 src_configure() {
@@ -150,6 +154,7 @@ src_configure() {
 		-Dconsolekit="disabled"
 		-Dcurl="enabled"
 		-Defi_binary="false"
+		-Dgresource_quirks="disabled"
 		-Dsupported_build="enabled"
 		-Dudevdir="${EPREFIX}$(get_udevdir)"
 		$(meson_feature archive libarchive)
