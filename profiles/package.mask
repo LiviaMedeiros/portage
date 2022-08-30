@@ -33,6 +33,40 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2022-08-30)
+# Flask-Security-Too is a package with high maintenance cost
+# and no revdeps in ::gentoo.  The next version bump (once more)
+# introduces more dependencies.
+#
+# The remaining listed packages are used exclusively by this package
+# (or its tests).  If you find one of them useful, please let us know
+# and we'll keep it.
+#
+# Removal on 2022-09-29.  Bug #867415.
+dev-python/flask-security
+dev-python/flask-babelex
+dev-python/flask-mail
+dev-python/flask-principal
+dev-python/flask-wtf
+dev-python/mongomock
+dev-python/peewee
+dev-python/pony
+dev-python/pyqrcode
+dev-python/sentinels
+dev-python/speaklater
+dev-python/zxcvbn
+
+# Matt Turner <mattst88@gentoo.org> (2022-08-29)
+# Unpatched security vulerabilities. Bug #857780.
+# Removal on 2022-09-29.
+=x11-base/xorg-server-1.20*
+=x11-base/xorg-drivers-1.20*
+
+# Matt Turner <mattst88@gentoo.org> (2022-08-29)
+# Fails to build with xorg-server-21. Bug #828426.
+# Removal on 2022-09-29.
+x11-drivers/xf86-video-glint
+
 # Hans de Graaff <graaff@gentoo.org) (2022-08-27)
 # No longer maintained upstream and more modern alternatives such as
 # www-servers/puma are available.
@@ -215,12 +249,6 @@ sys-cluster/slurm
 # EAPI 6. Removal in 30 days, bug 733354
 net-misc/calico-cni-plugin
 net-misc/calicoctl
-
-# Sam James <sam@gentoo.org> (2022-08-14)
-# Removes MSVC functionality which some packages are relying on - they
-# need time to adapt to upstream setuptools changes.
-# bug #865183.
-=dev-python/setuptools-65.0.0
 
 # John Helmert III <ajak@gentoo.org> (2022-08-14)
 # Vulnerable and unmaintained for years, many open bugs, no revdeps
