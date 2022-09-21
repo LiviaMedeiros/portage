@@ -6454,6 +6454,7 @@ net-misc/gerbera:lastfm - Enable last.fm support
 net-misc/gerbera:mysql - Use dev-db/mysql as backend rather than SQLite3
 net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata
 net-misc/gnome-online-miners:flickr - Enable Flickr support
+net-misc/gnome-remote-desktop:aac - Use media-libs/fdk-aac for audio output redirection of the RDP backend
 net-misc/gsasl:client - Build client component
 net-misc/gsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-misc/gsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
@@ -7891,6 +7892,8 @@ sys-apps/net-tools:slattach - build the slattach tool (for working with old seri
 sys-apps/nvme-cli:hugepages - Use huge pages for memory allocations via sys-libs/libhugetlbfs
 sys-apps/nvme-cli:json - Support JSON output via dev-libs/json-c
 sys-apps/nvme-cli:uuid - UUID support via sys-apps/util-linux
+sys-apps/openrazer:client - Build the OpenRazer daemon client
+sys-apps/openrazer:daemon - Build the OpenRazer daemon service
 sys-apps/openrc:bash - enable the use of bash in service scripts (experimental)
 sys-apps/openrc:netifrc - enable Gentoo's network stack (net.* scripts)
 sys-apps/openrc:newnet - enable the new network stack (experimental)
