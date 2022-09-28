@@ -42,7 +42,7 @@ COMMON_DEPEND="
 		media-libs/harfbuzz:=
 		x11-libs/cairo
 		x11-libs/gdk-pixbuf:2
-		x11-libs/gtk+:3
+		x11-libs/gtk+:3[X]
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXxf86vm
@@ -82,7 +82,6 @@ QA_PREBUILT="lib/firmware/* opt/bin/* usr/lib*"
 
 PATCHES=(
 	"${FILESDIR}"/nvidia-drivers-470.141.03-clang15.patch
-	"${FILESDIR}"/nvidia-extras-470.141.03-clang16.patch
 	"${FILESDIR}"/nvidia-modprobe-390.141-uvm-perms.patch
 	"${FILESDIR}"/nvidia-settings-390.144-desktop.patch
 	"${FILESDIR}"/nvidia-settings-390.144-no-gtk2.patch

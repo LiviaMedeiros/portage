@@ -39,7 +39,7 @@ COMMON_DEPEND="
 		media-libs/harfbuzz:=
 		x11-libs/cairo
 		x11-libs/gdk-pixbuf:2
-		x11-libs/gtk+:3
+		x11-libs/gtk+:3[X]
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXxf86vm
@@ -73,7 +73,6 @@ BDEPEND="
 QA_PREBUILT="opt/bin/* usr/lib*"
 
 PATCHES=(
-	"${FILESDIR}"/nvidia-extras-390.154-clang16.patch
 	"${FILESDIR}"/nvidia-modprobe-390.141-uvm-perms.patch
 	"${FILESDIR}"/nvidia-settings-390.141-fno-common.patch
 	"${FILESDIR}"/nvidia-settings-390.144-desktop.patch
