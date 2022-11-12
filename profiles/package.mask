@@ -33,6 +33,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2022-11-11)
+# Had a handful of reports of unbootable systems with this new version.
+# Given it's a still-experimental new branch, mask for now in case.
+# Feel free to unmask if you've had no issues, but otherwise please
+# report to NVIDIA. https://bugs.gentoo.org/881025
+~x11-drivers/nvidia-drivers-525.53
+
 # Matt Turner <mattst88@gentoo.org> (2022-11-11)
 # Relies on function no longer present in the Xserver since v1.20
 # (released May 2018), and no user has noticed. Use xf86-video-nouveau instead.
@@ -257,12 +264,6 @@ games-mud/gnome-mud
 # Bug #838109.
 # Removal on 2022-11-13
 net-misc/spread
-
-# Matt Turner <mattst88@gentoo.org> (2022-10-12)
-# Unmaintained and archived upstream. Last release in 2017.
-# Bug #597960.
-# Removal on 2022-11-12
-net-im/empathy
 
 # Sam James <sam@gentoo.org> (2022-10-12)
 # Upstream has withdrawn these releases because of a (yet unexplained)
