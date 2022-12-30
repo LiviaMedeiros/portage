@@ -6593,6 +6593,8 @@ net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
 net-misc/tigervnc:server - Build TigerVNC server
+net-misc/turbovnc:client - Build the client (vncviewer)
+net-misc/turbovnc:server - Build the server (vncserver, Xvnc)
 net-misc/uftp:server - Install uftp server daemon
 net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch against a real interface.
 net-misc/wget:cookie-check - Enable cookie checks via net-libs/libpsl
@@ -7323,6 +7325,7 @@ sci-libs/libgeodecomp:silo - Enables SILO related code
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/liborigin:tools - Install opj2dat command line util
+sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and variables like 'uptime'.
 sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/libsigrok:ftdi - Enable drivers that need dev-embedded/libftdi
 sci-libs/libsigrok:hidapi - Enable drivers that need dev-libs/hidapi
@@ -8652,6 +8655,7 @@ www-client/links:brotli - Enable app-arch/brotli support
 www-client/links:freetype - Enable media-libs/freetype support
 www-client/links:libevent - Enable dev-libs/libevent support
 www-client/links:lzip - Enable app-arch/lzip support
+www-client/lynx:brotli - Enable support for Brotli decompression
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/microsoft-edge:mip - Install Microsoft Information Protection plugin.
