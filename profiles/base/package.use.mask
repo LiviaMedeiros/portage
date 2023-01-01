@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Matt Turner <mattst88@gentoo.org> (2023-01-01)
+# Depends on nautilus < 43
+>=app-text/evince-43.0 nautilus
+
 # Sam James <sam@gentoo.org> (2022-12-31)
 # seccomp cannot be disabled via a runtime toggle which introduces substantial
 # fragility to Portage which relies on pax-utils' scanelf heavily. bug #815877.
@@ -46,12 +50,6 @@ app-text/crm114 mimencode
 # Guillermo Joandet <gjoandet@gmail.com> (2022-11-22)
 # app-text/pandoc is not keyworded on most architectures
 net-libs/gssdp man
-
-# Matt Turner <mattst88@gentoo.org> (2022-09-26)
-# Requires nautilus-43.0 which is keyworded everywhere
->=app-arch/file-roller-43.0 nautilus
->=app-text/evince-43.0 nautilus
->=x11-terms/gnome-terminal-3.46 nautilus
 
 # Sam James <sam@gentoo.org> (2022-11-19)
 # Needs long-EOL dev-lang/spidermonkey:60 (which also needs python:2.7).
