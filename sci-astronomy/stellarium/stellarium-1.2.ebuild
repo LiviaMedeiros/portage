@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{9..11} )
 inherit cmake desktop flag-o-matic python-any-r1 xdg verify-sig virtualx
 
 DESCRIPTION="3D photo-realistic skies in real time"
@@ -30,7 +30,7 @@ SRC_URI="
 
 LICENSE="GPL-2+ SGI-B-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~riscv"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="debug deep-sky doc gps media nls qt6 +scripting +show-my-sky stars telescope test webengine +xlsx"
 # Qt6 QAudioOutput crashes on startup; qt 6.4.0
 # https://bugreports.qt.io/browse/QTBUG-108221
