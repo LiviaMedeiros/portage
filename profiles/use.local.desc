@@ -395,6 +395,7 @@ app-crypt/tpm2-totp:plymouth - Add sys-boot/plymouth support
 app-crypt/tpm2-tss:fapi - Enable feature API (requires openssl as crypto backend)
 app-crypt/tpm2-tss:mbedtls - Use net-libs/mbedtls as crypto engine
 app-crypt/tpm2-tss:openssl - Use dev-libs/openssl as crypto engine
+app-crypt/tpm2-tss:policy - Enable policy library (requires openssl as crypto backend)
 app-crypt/veracrypt:asm - Enable assembly for optimization
 app-crypt/zulucrypt:gnome - Enable support for the freedesktop.org Secret Service API via app-crypt/libsecret
 app-crypt/zulucrypt:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
@@ -4474,8 +4475,10 @@ media-sound/aqualung:systray - Enable system tray support
 media-sound/ardour:phonehome - contact ardour.org at startup for new announcements
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
+media-sound/audacity:audiocom - Enable integrated uploading to audio.com
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
+media-sound/audacity:mpg123 - Use media-sound/mpg123 instead of media-libs/libmad for decoding MPEG decoding
 media-sound/audacity:portmidi - Enable support for MIDI via media-libs/portmidi
 media-sound/audacity:portmixer - Enable the internal portmixer feature
 media-sound/audacity:portsmf - Enable support for Portable Standard Midi File Library
@@ -6377,7 +6380,6 @@ net-misc/frr:rpki - Enable RPKI
 net-misc/gerbera:curl - Support HTTP media sources (e.g. internet radio)
 net-misc/gerbera:exiv2 - Use media-gfx/exiv2 to extract EXIF information
 net-misc/gerbera:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
-net-misc/gerbera:lastfm - Enable last.fm support
 net-misc/gerbera:mysql - Use dev-db/mysql as backend rather than SQLite3
 net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata
 net-misc/gnome-online-miners:flickr - Enable Flickr support
@@ -7119,7 +7121,7 @@ sci-geosciences/gmt:htmldoc - Install html documentation
 sci-geosciences/gmt:metric - Use SI (cm) units instead of US (inches) ones
 sci-geosciences/gmt:mex - Enable compilation of mex supplement which requires Octave/Matlab
 sci-geosciences/gmt:octave - Enable octave support
-sci-geosciences/gmt:pcre2 - Use libpcre2 for regular expressions
+sci-geosciences/gmt:pcre2 - Use dev-libs/libpcre2 for regular expressions
 sci-geosciences/gmt:tutorial - Install data files for tutorial
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
 sci-geosciences/gpsd:latency-timing - support latency timing information
