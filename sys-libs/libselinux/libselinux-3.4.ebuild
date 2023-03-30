@@ -40,6 +40,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig
 	python? ( >=dev-lang/swig-2.0.9 )
 	ruby? ( >=dev-lang/swig-2.0.9 )"
+IDEPEND="python? ( dev-python/pip[${PYTHON_USEDEP}] )"
 
 src_prepare() {
 	eapply_user
