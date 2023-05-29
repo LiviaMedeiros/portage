@@ -5,7 +5,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_TESTED=( python3_{9..11} pypy3 )
+PYTHON_TESTED=( python3_{10..12} pypy3 )
 PYTHON_COMPAT=( "${PYTHON_TESTED[@]}" )
 PYTHON_REQ_USE="ssl(+)"
 
@@ -59,8 +59,6 @@ src_prepare() {
 
 python_test() {
 	local -x CI=1
-	# FIXME: get tornado ported
-	# please keep in sync with BDEPEND!
 	if ! has "${EPYTHON}" "${PYTHON_TESTED[@]/_/.}"; then
 		einfo "Skipping tests on ${EPYTHON}"
 		return
