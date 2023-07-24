@@ -986,6 +986,7 @@ glibc_do_configure() {
 	myconf+=(
 		--disable-werror
 		--enable-bind-now
+		--enable-fortify-source
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
 		$(use_enable profile)
@@ -1026,6 +1027,11 @@ glibc_do_configure() {
 		# https://sourceware.org/PR27991
 		libc_cv_have_x86_lahf_sahf=no
 		libc_cv_have_x86_movbe=no
+
+		# On aarch64 there is no way to override -mcpu=native, and if
+		# the current cpu does not support SVE configure fails.
+		# Let's boldly assume our toolchain can always build SVE instructions.
+		libc_cv_aarch64_sve_asm=yes
 
 		${EXTRA_ECONF}
 	)
