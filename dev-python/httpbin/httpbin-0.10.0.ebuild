@@ -10,13 +10,13 @@ inherit distutils-r1 pypi
 
 DESCRIPTION="HTTP Request and Response Service"
 HOMEPAGE="
-	https://github.com/postmanlabs/httpbin/
+	https://github.com/psf/httpbin/
 	https://pypi.org/project/httpbin/
 "
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~s390 ~sparc"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~riscv ~s390 ~sparc"
 
 RDEPEND="
 	dev-python/brotlicffi[${PYTHON_USEDEP}]

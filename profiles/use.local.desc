@@ -821,6 +821,7 @@ app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
+app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:opencl - Enables OpenCL support
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:pci - Enables reading GPU via sys-apps/pciutils
@@ -4698,15 +4699,6 @@ media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
-media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
-media-sound/pragha:grilo - Play songs on DLNA servers using media-libs/grilo
-media-sound/pragha:keybinder - Enable shortcut support using dev-libs/keybinder
-media-sound/pragha:koel - Append music on Koel server
-media-sound/pragha:lastfm - Enable last.fm support using media-libs/libclastfm
-media-sound/pragha:peas - Enable various plugins that will pull in dev-libs/libpeas as a dependency
-media-sound/pragha:playlist - Enable enhanced playlist support using dev-libs/totem-pl-parser
-media-sound/pragha:rygel - Share music on DLNA using net-misc/rygel
-media-sound/pragha:soup - Search metadata on AcoustID and radios on TuneIn using net-libs/libsoup
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/puddletag:quodlibet - Enables support for editing media-sound/quodlibet databases
 media-sound/pulseaudio:daemon - Build the pulseaudio binary (not-needed for pipewire-pulse)
@@ -9010,7 +9002,6 @@ x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-wm/ctwm:jpeg - Enable jpeg image support with virtual/jpeg
 x11-wm/ctwm:test - Enable upstream test suite, build required binary
 x11-wm/ctwm:xpm - Enable xpm icon support with x11-libs/libXpm
-x11-wm/e16:container - Use container window
 x11-wm/e16:debug - Build libtrip debugging library
 x11-wm/e16:dialogs - Enable support for configuration dialogs
 x11-wm/e16:libhack - Build libhack window mode helper library
