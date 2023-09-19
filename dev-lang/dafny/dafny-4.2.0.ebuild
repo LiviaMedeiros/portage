@@ -315,6 +315,7 @@ BDEPEND="
 	test? (
 		${PYTHON_DEPS}
 		dev-lang/boogie
+		dev-lang/go
 		dev-python/OutputCheck
 		dev-python/lit
 		net-libs/nodejs[npm]
@@ -351,6 +352,14 @@ pkg_setup() {
 	# We need to set up Python only for running test tools (called via lit).
 	if use test ; then
 		python-any-r1_pkg_setup
+	fi
+}
+
+src_unpack() {
+	dotnet-pkg_src_unpack
+
+	if [[ -n ${EGIT_REPO_URI} ]] ; then
+		git-r3_src_unpack
 	fi
 }
 
