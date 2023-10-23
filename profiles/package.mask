@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-10-23)
+# Broken on Python 3.11.  Archived upstream since 2020.  No revdeps.
+# Removal on 2023-11-22.  Bug #896886.
+dev-python/sphinx-testing
+
 # Michał Górny <mgorny@gentoo.org> (2023-10-22)
 # Incompatible with Python 3.12.  Last commit in 2016.  No revdeps.
 # Removal on 2023-11-21.  Bug #909917.
@@ -195,12 +200,6 @@ dev-python/memory-profiler
 # the version bump from a year ago yet.  No reverse dependencies.
 # Removal on 2023-10-29.  Bug #894592.
 dev-python/django-mptt
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-09-23)
-# >=media-sound/spotify-1.2.20 now has its own tray icon.
-# Therefore the use case for this package is gone.
-# Removal on 2023-10-23
-media-sound/spotify-tray
 
 # Hans de Graaff <graaff@gentoo.org> (2023-09-23)
 # ruby31-only package. No reverse dependencies. Archived by
