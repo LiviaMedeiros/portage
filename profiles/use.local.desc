@@ -3819,6 +3819,7 @@ mail-filter/pyzor:gdbm - Enables the Gdbm back-end database engine for pyzord
 mail-filter/pyzor:mysql - Enables the MySQL back-end database engine for pyzord through dev-python/mysqlclient.
 mail-filter/pyzor:pyzord - Enable the pyzord server daemon
 mail-filter/pyzor:redis - Enables the redis back-end database engine for pyzord through dev-python/redis
+mail-filter/rspamd:hyperscan - Enable hyperscan for fast regexp processing
 mail-filter/rspamd:jit - Enable PCRE JIT support
 mail-filter/spamassassin:cron - Install a cron job to update SpamAssassin's rules daily.
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -4172,7 +4173,6 @@ media-libs/embree:ssp - When enabled, Embree compiles with stack protection agai
 media-libs/embree:tbb - Use TBB instead of the built-in Embree tasking system.
 media-libs/embree:tutorial - Enable to build Embree tutorials programs.
 media-libs/esdl:image - Enable image support
-media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/fcft:harfbuzz - Use media-libs/harfbuzz for grapheme and run shaping
 media-libs/fcft:libutf8proc - Use media-libs/harfbuzz and dev-libs/libutf8proc for run shaping
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
@@ -6378,6 +6378,7 @@ net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:aad - Enable login via Azure AD
+net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
