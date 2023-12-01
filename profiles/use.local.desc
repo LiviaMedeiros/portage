@@ -2683,6 +2683,7 @@ dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gtk - Build the GTK platform theme plugin
 dev-qt/qtxmlpatterns:qml - Build the XmlListModel import for QtQuick (requires QtDeclarative)
+dev-ruby/activesupport:msgpack - Support ActiveSupport::MessagePack module
 dev-ruby/asciidoctor-diagram:barcode - Enable diagrams with dev-ruby/rqrcode and dev-ruby/barby
 dev-ruby/asciidoctor-diagram:ditaa - Enable diagrams with media-gfx/ditaa
 dev-ruby/asciidoctor-diagram:lilypond - Enable diagrams with media-sound/lilypond
@@ -3942,7 +3943,6 @@ media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/noto:extra - Install full upstream font set including condensed, semi-bold, extra-light variants
 media-fonts/noto-emoji:icons - Install Noto Emoji icon theme
-media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:center-tilde - Place the '~' character vertically centered on the line instead of to the top.
 media-fonts/terminus-font:distinct-l - ll2 variant with more distinctive l (lowercase L)
