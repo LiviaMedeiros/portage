@@ -208,7 +208,7 @@ app-alternatives/sh:lksh - Symlink to lksh from app-shells/mksh
 app-alternatives/sh:mksh - Symlink to mksh from app-shells/mksh
 app-alternatives/tar:gnu - Symlink to GNU tar (app-arch/tar)
 app-alternatives/tar:libarchive - Symlink to bsdtar from app-arch/libarchive
-app-alternatives/yacc:bison - Symlink to sys-devel/bison.
+app-alternatives/yacc:bison - Symlink to app-alternatives/yacc.
 app-alternatives/yacc:byacc - Symlink to dev-util/byacc.
 app-alternatives/yacc:reference - Symlink to dev-util/yacc.
 app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc (also has its own USE flag), sigtool, clambc, clamav-milter (also requires milter USE flag), clamdtop, clamsubmit, clamconf).
@@ -2776,7 +2776,7 @@ dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/diffoscope:R - Use dev-lang/R
 dev-util/diffoscope:binutils - Use sys-devel/binutils
-dev-util/diffoscope:cpio - Use app-arch/cpio
+dev-util/diffoscope:cpio - Use app-alternatives/cpio
 dev-util/diffoscope:diff - Use sys-apps/diffutils
 dev-util/diffoscope:docx - Use app-text/docx2txt
 dev-util/diffoscope:dtc - Use sys-apps/dtc
@@ -4103,7 +4103,6 @@ media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats
 media-gfx/ueberzugpp:wayland - Enable wayland support (proper window positioning is only supported with some compositors)
 media-gfx/ueberzugpp:xcb-errors - Use x11-libs/xcb-util-errors for better error reporting with X
 media-gfx/xpaint:pgf - Support for loading PGF images
-media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
 media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
 media-gfx/yafaray:opencv - Add support for media-libs/opencv image processing.
@@ -4132,7 +4131,6 @@ media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:exceptions - Compile with C++ exceptions
 media-libs/coin:qthelp - Build API documentation in QtHelp format
-media-libs/cubeb:rust - Use the newer rust-based audio backends if available
 media-libs/cubeb:sndio - Enable support for the media-sound/sndio backend
 media-libs/dav1d:10bit - Add support for building 10-bit and 12-bit AV1.
 media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
@@ -8109,7 +8107,7 @@ sys-devel/clang-toolchain-symlinks:native-symlinks - Install generic tool symlin
 sys-devel/crosstool-ng:dtc - Require sys-apps/dtc
 sys-devel/crosstool-ng:lzip - Require app-arch/lzip
 sys-devel/crosstool-ng:meson - Require dev-util/meson
-sys-devel/crosstool-ng:ninja - Require dev-util/ninja
+sys-devel/crosstool-ng:ninja - Require app-alternatives/ninja
 sys-devel/crosstool-ng:rsync - Require net-misc/rsync
 sys-devel/crosstool-ng:wget - Require net-misc/wget
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue

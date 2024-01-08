@@ -9,7 +9,7 @@ DESCRIPTION="Cross-platform application development framework"
 SRC_URI+=" https://dev.gentoo.org/~ionen/distfiles/${P}-QTBUG-116905.patch.xz"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
 fi
 
 declare -A QT6_IUSE=(
@@ -249,9 +249,6 @@ src_configure() {
 		IFS=' ' read -ra intrins < <(
 			: "$(test-flags-CXX "${cpuflags[@]/#/-m}")"
 			$(tc-getCXX) -E -P ${_} ${CXXFLAGS} ${CPPFLAGS} - <<-EOF | tail -n 1
-				#if defined(__GNUC__) && (defined(__x86_64__) || defined(__i386__))
-				#include <x86intrin.h>
-				#endif
 				$(printf '__%s__ ' "${cpuflags[@]^^}")
 			EOF
 			assert

@@ -7,7 +7,7 @@ MODULES_OPTIONAL_IUSE=+modules
 inherit desktop flag-o-matic linux-mod-r1 readme.gentoo-r1
 inherit systemd toolchain-funcs unpacker user-info
 
-MODULES_KERNEL_MAX=6.6
+MODULES_KERNEL_MAX=6.7
 NV_URI="https://download.nvidia.com/XFree86/"
 
 DESCRIPTION="NVIDIA Accelerated Graphics Driver"
@@ -133,6 +133,9 @@ src_prepare() {
 	mv NVIDIA-kernel-module-source-${PV} kernel-module-source || die
 
 	default
+
+	kernel_is -ge 6 7 &&
+		eapply "${FILESDIR}"/nvidia-drivers-535.43.22-kernel-6.7.patch
 
 	# prevent detection of incomplete kernel DRM support (bug #603818)
 	sed 's/defined(CONFIG_DRM/defined(CONFIG_DRM_KMS_HELPER/g' \
