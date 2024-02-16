@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2024-02-18)
+# Lots of changes, including a port to a new build system. Needs lots of testing.
+=sys-apps/gentoo-functions-1*
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-16)
+# Breaks dev-util/pkgcheck.  Masked until we resolve that.  Bug #924718.
+=dev-vcs/git-2.43.2
+
+# Sam James <sam@gentoo.org> (2024-02-15)
+# May break on some arches b/c of visibility/map changes to ffi_type_longdouble
+=dev-libs/libffi-3.4.5
+
 # Ulrich Müller <ulm@gentoo.org> (2024-02-15)
 # Hangs at runtime, bug #924617.
 =net-im/zoom-5.17.5.2543
@@ -86,6 +98,15 @@ kde-misc/bismuth
 dev-cpp/libodb
 dev-cpp/libodb-sqlite
 dev-util/build2
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-02-14)
+# "A harness to build OpenJDK using [...]" is no longer needed since
+# Gentoo can build openjdk from source.
+# Maintainer capacity missing to maintain these packages.
+# More than 30 open bugs.
+# Removal on 2024-03-15.
+dev-java/icedtea
+dev-java/icedtea-bin
 
 # Michał Górny <mgorny@gentoo.org> (2024-02-10)
 # Very fragile, keeps breaking.  Limited platform support.  Used only
