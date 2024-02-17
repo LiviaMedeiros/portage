@@ -37,10 +37,6 @@
 # Lots of changes, including a port to a new build system. Needs lots of testing.
 =sys-apps/gentoo-functions-1*
 
-# Michał Górny <mgorny@gentoo.org> (2024-02-16)
-# Breaks dev-util/pkgcheck.  Masked until we resolve that.  Bug #924718.
-=dev-vcs/git-2.43.2
-
 # Sam James <sam@gentoo.org> (2024-02-15)
 # May break on some arches b/c of visibility/map changes to ffi_type_longdouble
 =dev-libs/libffi-3.4.5
@@ -417,6 +413,7 @@ dev-java/osgi-foundation
 ~net-libs/signon-oauth2-0.25_p20210102
 =net-libs/signond-8.61-r100
 ~net-misc/kio-zeroconf-24.01.95
+=net-misc/smb4k-3.2.5-r2
 ~sys-auth/polkit-qt-0.175.0
 
 # Sam James <sam@gentoo.org> (2023-12-14)
