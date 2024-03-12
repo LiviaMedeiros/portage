@@ -7165,7 +7165,6 @@ sci-chemistry/vmd:msms - Add support for MSMS SES calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/votca:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
-sci-electronics/geda:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/ghdl:llvm - Build LLVM code generator
 sci-electronics/gspiceui:schematics - Use sci-electronics/geda for schematics editing
@@ -7733,7 +7732,6 @@ sys-apps/cpu-x:pci - Use the sys-apps/pciutils library for PCI info
 sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dbus-broker:launcher - dbus-daemon compatibility launcher
-sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/dtc:yaml - support .yaml-encoded device trees
 sys-apps/duc:X - Use X11 for the GUI instead of OpenGL. This is the recommended option
 sys-apps/duc:cairo - Build support for exporting to PNG and PDF with x11-libs/cairo
