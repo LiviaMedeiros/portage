@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~m68k"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc64 ~sparc"
 IUSE="test-rust"
 
 RDEPEND="
@@ -36,9 +36,10 @@ BDEPEND="
 		>=dev-python/pytest-rerunfailures-9.1[${PYTHON_USEDEP}]
 		>=dev-python/pytest-xdist-1.34[${PYTHON_USEDEP}]
 		>=dev-python/setuptools-56.0.0[${PYTHON_USEDEP}]
+		>=dev-python/virtualenv-20.0.35[${PYTHON_USEDEP}]
 		>=dev-python/wheel-0.36.0[${PYTHON_USEDEP}]
 		test-rust? (
-			dev-python/uv
+			!sparc? ( dev-python/uv )
 		)
 	)
 "
