@@ -14,7 +14,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://github.com/zaps166/QMPlay2/releases/download/${PV}/QMPlay2-src-${PV}.tar.xz"
 	S="${WORKDIR}/QMPlay2-src-${PV}"
-	KEYWORDS="amd64"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="LGPL-3"
@@ -86,7 +86,7 @@ src_configure() {
 		-DUSE_UPDATES=OFF
 		-DUSE_ALSA=$(usex alsa)
 		-DUSE_AUDIOCD=$(usex cdio)
-		-DUSE_DBUS_SUSPEND=ON
+		-DUSE_DBUS_PM=ON
 		-DUSE_FREEDESKTOP_NOTIFICATIONS=ON
 		-DUSE_LIBASS=$(usex libass)
 		-DUSE_NOTIFY=$(usex notifications)
