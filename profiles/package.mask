@@ -33,6 +33,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-04-19)
+# EAPI=6, library only without any reverse dependencies, uses
+# deprecated go eclasses, maintainer-needed.
+# Removal on 2024-05-19, bug #930249
+dev-go/qr
+dev-go/twofactor
+
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-04-18)
 # Upstream gone, unfetchable, stuck on EAPI 6. Bug 605796
 # Removal on 2024-05-18
@@ -43,10 +50,6 @@ sci-visualization/spectromatic
 # is more performant and designed to be a drop-in replacement.
 # Removal on 2024-05-16, bug #929444
 dev-python/carbon
-
-# Matthew Smith <matthew@gentoo.org> (2024-04-15)
-# Unexpected ABI break, bug #930039
-=dev-libs/tree-sitter-0.22.4
 
 # Fabian Groffen <grobian@gentoo.org> (2024-04-13)
 # Python wrapper around liblmsensors, no reverse dependencies
