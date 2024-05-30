@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2024-05-29)
+# OpenPGP key of malicious xz co-maintainer. This key is no longer used
+# by any ebuilds in tree. Removal on 2024-06-29.
+# Bug #928134.
+sec-keys/openpgp-keys-jiatan
+
 # Sam James <sam@gentoo.org> (2024-05-28)
 # Breaks reverse dependencies like protobuf-c (bug #932857) and protobuf-26.1
 # itself isn't compatible with this abseil-cpp version (bug #932848).
@@ -173,10 +179,6 @@ dev-python/whichcraft
 # Bug #862669, #890423.
 # Removal on 2024-06-16.
 sci-libs/beagle
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-05-14)
-# Breaks build of revdeps. Bugs #931916, #931917
-~app-text/poppler-24.05.0
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-05-13)
 # EAPI=6, fails to compile, archived upstream, uses deprecated go eclasses.
@@ -645,7 +647,6 @@ sec-keys/openpgp-keys-jiatan
 ~kde-apps/kdenetwork-filesharing-24.05.0
 ~kde-apps/kget-24.05.0
 ~kde-apps/kio-extras-24.05.0
-~kde-apps/krdc-24.05.0
 ~kde-apps/krfb-24.05.0
 ~kde-apps/signon-kwallet-extension-24.05.0
 ~kde-misc/kdeconnect-24.05.0
@@ -778,8 +779,8 @@ sec-keys/openpgp-keys-jiatan
 =net-misc/smb4k-3.2.5-r2
 ~sys-auth/polkit-qt-0.200.0
 ~x11-misc/sddm-0.21.0_p20240302
-~app-office/libreoffice-24.2.3.2
-~app-office/libreoffice-l10n-24.2.3.2
+~app-office/libreoffice-24.2.4.1
+=app-office/libreoffice-24.2.3.2-r10
 
 # Ulrich Müller <ulm@gentoo.org> (2024-02-08)
 # Masked for testing.
