@@ -877,7 +877,6 @@ app-misc/ebusd:mqtt - Enable support for connecting to MQTT.
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
 app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
-app-misc/fastfetch:nvidia-gpu - Enables extra support for NVIDIA GPU
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
 app-misc/fastfetch:xfce - Enables support for XFCE config
@@ -7879,6 +7878,7 @@ sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
 sys-apps/net-tools:plipconfig - build the plipconfig tool (for working with old PLIP hardware)
 sys-apps/net-tools:slattach - build the slattach tool (for working with old serial ports)
 sys-apps/nvme-cli:json - Support JSON output via dev-libs/json-c
+sys-apps/nvme-cli:pdc - Set default Persistent Discovery Controllers behavior
 sys-apps/openrazer:client - Build the OpenRazer daemon client
 sys-apps/openrazer:daemon - Build the OpenRazer daemon service
 sys-apps/openrc:bash - enable the use of bash in service scripts (experimental)

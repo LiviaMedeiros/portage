@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-08-06)
+# Superseded by dev-libs/libayatana-*.  No revdeps left.
+# Removal on 2024-09-05.  Bug #936881.
+dev-libs/libappindicator
+dev-libs/libindicator
+
 # Michael Orlitzky <mjo@gentoo.org> (2024-08-03)
 # Unmaintained package. Upstream is not quite _dead_, but the project
 # domain (where tarballs and documentation were hosted) was hijacked in
@@ -207,11 +213,6 @@ net-dialup/openl2tp
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
 >=media-video/ffmpeg-7.0
-
-# Michał Górny <mgorny@gentoo.org> (2024-07-06)
-# Leftover backport for Python 3.9.  No revdeps.
-# Removal on 2024-08-05.  Bug #935676.
-dev-python/pathlib2
 
 # Joonas Niilola <juippis@gentoo.org> (2024-07-04)
 # libxml2-2.13.1 removed "deprecated" symbols that other (older)
