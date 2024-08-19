@@ -65,6 +65,9 @@ BDEPEND="
 	>=sys-devel/bpf-toolchain-14.1.0
 	sys-devel/flex
 "
+# TODO: Make this optional, valgrind.h is included unconditionally
+# https://github.com/oracle/dtrace-utils/issues/80
+DEPEND+=" dev-debug/valgrind"
 
 pkg_pretend() {
 	# TODO: optional kernel patches
@@ -94,8 +97,7 @@ src_configure() {
 
 	tc-export CC
 
-	# TODO: Can drop once https://lore.kernel.org/dtrace/20240425164057.420580-1-nick.alcock@oracle.com/ is in
-	# XXX: That wasn't enough, need to report upstream the other issues during build
+	# https://github.com/oracle/dtrace-utils/issues/78
 	tc-enables-fortify-source && append-cppflags -U_FORTIFY_SOURCE
 
 	# lld does this by default, so fix that, although lld fails anyway...
