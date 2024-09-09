@@ -33,6 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-09)
+# No revdeps for years, KF5-based. Removal on 2024-10-09.
+net-libs/libmediawiki
+
 # Alfredo Tupone <tupone@gentoo.org> (2024-06-09)
 # These packages are no more needed. Use dev-ml/dune-private-libs
 # that include these
@@ -293,11 +297,6 @@ kde-misc/plasma-applet-network-monitor
 # of a downstream patch porting away from KDElibs4. No reports of it even
 # being in a working state (e.g. bug 813031). Removal on 2024-09-29.
 kde-misc/kio-locate
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-08-29)
-# Depends on kde-apps/konqueror:5 which is close to being obsolete.
-# No signs of upstream porting work. Removal on 2024-09-29.
-kde-misc/kio-gopher
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-08-25)
 # Broken with current Plasma 5 version, not ported to Plasma 6.
