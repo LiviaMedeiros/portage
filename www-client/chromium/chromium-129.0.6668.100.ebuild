@@ -70,7 +70,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0/stable"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 arm64"
 IUSE_SYSTEM_LIBS="+system-harfbuzz +system-icu +system-png +system-zstd"
 IUSE="+X ${IUSE_SYSTEM_LIBS} bindist cups debug ffmpeg-chromium gtk4 +hangouts headless kerberos +official pax-kernel pgo +proprietary-codecs pulseaudio"
 IUSE+=" qt5 qt6 +screencast selinux +system-toolchain +vaapi +wayland +widevine"
@@ -409,19 +409,20 @@ pkg_setup() {
 
 			local rustc_ver=$(chromium_extract_rust_version)
 			if ver_test "${rustc_ver}" -lt "${RUST_MIN_VER}"; then
-					eerror "Rust >=${RUST_MIN_VER} is required"
-					eerror "Please run 'eselect rust' and select the correct rust version"
-					die "Selected rust version is too old"
+					eerror "Rust >=${RUST_MIN_VER} is required to build Chromium"
+					eerror "The currently selected version is ${rustc_ver}"
+					eerror "Please run \`eselect rust\` and select an appropriate Rust."
+					die "Selected Rust version is too old"
 			else
-					einfo "Using rust ${rustc_ver} to build"
+					einfo "Using Rust ${rustc_ver} to build"
 			fi
 
 			# Chromium requires the Rust profiler library while setting up its build environment.
 			# Since a standard Rust comes with the profiler, instead of patching it out (build/rust/std/BUILD.gn#L103)
 			# we'll just do a sanity check on the selected slot.
+			# The -bin always contains profiler support, so we only need to check for the non-bin version.
 			if [[ "$(eselect --brief rust show 2>/dev/null)" != *"bin"* ]]; then
-				local arch=$(uname -m)
-				local rust_lib_path="${EPREFIX}/usr/lib/rust/${rustc_ver}/lib/rustlib/${arch}-unknown-linux-gnu/lib"
+				local rust_lib_path="${EPREFIX}$(rustc --print target-libdir)"
 				local profiler_lib=$(find "${rust_lib_path}" -name "libprofiler_builtins-*.rlib" -print -quit)
 				if [[ -z "${profiler_lib}" ]]; then
 					eerror "Rust ${rustc_ver} is missing the profiler library."
