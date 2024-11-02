@@ -23,7 +23,7 @@ SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 # +lapack because the internal fallbacks are pretty slow. Building without blas
 # is barely supported anyway, see bug #914358.
-IUSE="+lapack"
+IUSE="big-endian +lapack"
 
 RDEPEND="
 	lapack? (
@@ -114,7 +114,24 @@ python_test() {
 				'numpy/_core/tests/test_multiarray.py::TestDot::test_huge_vectordot[complex128]'
 				'numpy/_core/tests/test_multiarray.py::TestDot::test_huge_vectordot[float64]'
 			)
-			;&
+			;;
+		hppa)
+			EPYTEST_DESELECT+=(
+				# https://bugs.gentoo.org/942689
+				"numpy/_core/tests/test_dtype.py::TestBuiltin::test_dtype[int]"
+				"numpy/_core/tests/test_dtype.py::TestBuiltin::test_dtype[float]"
+				numpy/f2py/tests/test_kind.py::TestKind::test_real
+				numpy/f2py/tests/test_kind.py::TestKind::test_quad_precision
+				numpy/tests/test_ctypeslib.py::TestAsArray::test_reference_cycles
+				numpy/tests/test_ctypeslib.py::TestAsArray::test_segmentation_fault
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_scalar
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_subarray
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_structure
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_structure_aligned
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_union
+				numpy/tests/test_ctypeslib.py::TestAsCtypesType::test_padded_union
+			)
+			;;
 		ppc|x86)
 			EPYTEST_DESELECT+=(
 				# require too much memory
