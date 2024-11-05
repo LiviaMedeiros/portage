@@ -1231,7 +1231,6 @@ app-text/tessdata_fast:osd - Enable support orientation and script detection.
 app-text/tessdata_legacy:math - Enable support for recognition of equations.
 app-text/tessdata_legacy:osd - Enable support orientation and script detection.
 app-text/tesseract:float32 - Support float for model training and text recognition (faster, requires less RAM)
-app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:training - Install training applications to add support for new languages.
 app-text/texlive:context - Add support for the ConTeXt format (dev-texlive/texlive-context)
 app-text/texlive:extra - Add support for extra TeXLive packages
@@ -3907,7 +3906,6 @@ mail-mta/exim:tdb - Use sys-libs/tdb for internal database storage (such as hint
 mail-mta/exim:tpda - Adds support for Transport Post-Delivery Actions
 mail-mta/msmtp:daemon - Build/install msmtpd MTA daemon
 mail-mta/msmtp:mta - Enable this to install as system-wide MTA
-mail-mta/netqmail:authcram - Enable AUTHCRAM support
 mail-mta/netqmail:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/netqmail:highvolume - Prepare netqmail for high volume servers
 mail-mta/netqmail:pop3 - Include POP3 server
@@ -4418,6 +4416,7 @@ media-libs/opencv:quirc - Enable qrcode decoding via media-libs/quirc
 media-libs/opencv:tbb - Enable multithreading with the Intel Threads Building Block (dev-cpp/tbb)
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
+media-libs/opencv:truetype - Enable media-libs/freetype support for gapi module
 media-libs/opencv:video_cards_intel - Enable Video Acceleration API for hardware decoding for Intel cards
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
 media-libs/openexr:large-stack - Enables code to take advantage of large stack support.
