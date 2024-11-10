@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2024-11-10)
+# Fails to build with gcc-14. Horrible code. Not touched by a
+# maintainer since 2010. Bugs 729134, 870541, 909625, 933773
+# Removal in 30 days.
+app-accessibility/powiedz
+
 # Matt Jolly <kangie@gentoo.org> (2024-11-09)
 # The legacy Rust ebuilds are no longer maintained and have been
 # replaced by the new slotted Rust. Removal in 30 days.
@@ -371,15 +377,6 @@ app-i18n/kcm-fcitx
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
 >=media-video/ffmpeg-7.0
-
-# Joonas Niilola <juippis@gentoo.org> (2024-07-04)
-# libxml2-2.13.1 removed "deprecated" symbols that other (older)
-# packages depend upon. It can be mitigated with a --with-legacy
-# configure option, but it's still not a perfect fix. Bug #935452
-# to track and work on tree-wide support. Masking the exact version
-# so we can revbump the package with a fix.
-=dev-libs/libxml2-2.13.1
-=dev-libs/libxslt-1.1.41
 
 # Sam James <sam@gentoo.org> (2024-06-25)
 # The symbol versioning "fix" breaks anything built with 3.0.0.
