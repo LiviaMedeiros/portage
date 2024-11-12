@@ -130,7 +130,7 @@ declare -a -g -r _RUST_SLOTS_ORDERED=(
 # @DESCRIPTION:
 # This is an eclass-generated Rust dependency string, filtered by
 # RUST_MAX_VER and RUST_MIN_VER. If RUST_NEEDS_LLVM is set, this
-# is gropeda and gated by an appropriate `llvm_slot_x` USE for all
+# is grouped and gated by an appropriate `llvm_slot_x` USE for all
 # implementations listed in LLVM_COMPAT.
 
 # @ECLASS_VARIABLE: RUST_OPTIONAL
@@ -193,29 +193,25 @@ _rust_set_globals() {
 	local rust_dep=()
 	local llvm_slot
 	local rust_slot
-	local usedep
+	local usedep="${RUST_REQ_USE+[${RUST_REQ_USE}]}"
 
 	# If we're not using LLVM, we can just generate a simple Rust dependency
+	# In time we need to implement trivial dependencies
+	# (>=RUST_MIN_VER) where RUST_MAX_VER isnt't set,
+	# however the previous attempt to do this ran into issues
+	# where `emerge ... --keep-going` ate legacy non-slotted
+	# Rust blockers resutling in the non-slotted version never
+	# being removed and breaking builds. #943206 #943143
 	if [[ -z "${RUST_NEEDS_LLVM}" ]]; then
 		rust_dep=( "|| (" )
-		# We can be more flexible if we generate a simpler, open-ended dependency
-		# when we don't have a max version set.
-		if [[ -z "${RUST_MAX_VER}" ]]; then
+		# depend on each slot between RUST_MIN_VER and RUST_MAX_VER; it's a bit specific but
+		# won't hurt as we only ever add newer Rust slots.
+		for slot in "${_RUST_SLOTS[@]}"; do
 			rust_dep+=(
-				">=dev-lang/rust-bin-${RUST_MIN_VER}:*${usedep}"
-				">=dev-lang/rust-${RUST_MIN_VER}:*${usedep}"
+				"dev-lang/rust-bin:${slot}${usedep}"
+				"dev-lang/rust:${slot}${usedep}"
 			)
-		else
-			# depend on each slot between RUST_MIN_VER and RUST_MAX_VER; it's a bit specific but
-			# won't hurt as we only ever add newer Rust slots.
-			for slot in "${_RUST_SLOTS[@]}"; do
-				usedep="${RUST_REQ_USE+[${RUST_REQ_USE}]}"
-				rust_dep+=(
-					"dev-lang/rust-bin:${slot}${usedep}"
-					"dev-lang/rust:${slot}${usedep}"
-				)
-			done
-		fi
+		done
 		rust_dep+=( ")" )
 		RUST_DEPEND="${rust_dep[*]}"
 	else
