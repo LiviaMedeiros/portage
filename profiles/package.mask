@@ -33,14 +33,29 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-18)
+# All classes were moved to >=x11-libs/qwt-6.2.0. No revdeps.
+# Removal on 2024-12-18.
+x11-libs/qwtpolar
+
+# Robin H. Johnson <robbat2@gentoo.org> (2024-11-17)
+# bug 943698
+# Poor upstream code quality, unmaintained upstream;
+# no hardware for testing # anymore.
+# https://public-inbox.gentoo.org/gentoo-dev/robbat2-20240529T185323-477923075Z@orbis-terrarum.net/
+app-misc/g15composer
+app-misc/g15daemon
+app-misc/g15macro
+app-misc/g15message
+app-misc/g15mpd
+app-misc/g15stats
+dev-libs/libg15
+dev-libs/libg15render
+
 # Michał Górny <mgorny@gentoo.org> (2024-11-17)
 # Superseded by dev-lang/pypy:3.10.  This version is vulnerable.
 # Removal on 2024-12-01.
 dev-python/pypy3_10
-
-# Alfredo Tupone <tupone@gentoo.org> (2024-11-17)
-# Masked for testing
->=dev-ml/findlib-1.9.7
 
 # Alfredo Tupone <tupone@gentoo.org> (2024-11-17)
 # Included in dev-ml/odoc, the only rdep
@@ -305,19 +320,6 @@ dev-python/sentry-sdk
 # installed by dev-util/quilt with USE=emacs.
 # Removal on 2024-11-14. Bug #247500.
 app-emacs/quilt-el
-
-# Alfredo Tupone <tupone@gentoo.org> (2024-10-14)
-# These packages are no more needed.
-# Use dev-ml/opam, dev-ml/opam-file-format,
-# dev-ml/opam-installer
-# that include these
-# remove on 2024-11-14.
-dev-ml/opam-client
-dev-ml/opam-repository
-dev-ml/opam-state
-dev-ml/opam-format
-dev-ml/opam-core
-dev-ml/opam-solver
 
 # Holger Hoffstätte <holger@applied-asynchrony.com> (2024-10-11)
 # Vendors an unreleased libbpf version and generates ABI-breaking code.
