@@ -3243,6 +3243,8 @@ games-misc/xcowsay:fortune - Enable support for fortune cookies via games-misc/f
 games-mud/tf:atcp - enable ATCP support.
 games-mud/tf:gmcp - enable GMCP support.
 games-mud/tf:option102 - enable telnet option 102 support.
+games-puzzle/braid-gog:launcher - Install FLTK-based launcher that you probably don't need
+games-puzzle/braid-hb:launcher - Install FLTK-based launcher that you probably don't need
 games-puzzle/gnome-tetravex:cli - Build the gnome-tetravex-cli command-line interface
 games-puzzle/gnome-tetravex:gui - Build the gnome-tetravex graphical Gtk user interface
 games-puzzle/nightsky:bundled-libs - Use the upstream provided bundled libraries.
@@ -6716,12 +6718,10 @@ net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
 net-p2p/bitcoin-core:berkdb - Support legacy wallets in Berkeley DB format
-net-p2p/bitcoin-core:bitcoin-cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:daemon - Build and install bitcoind daemon
 net-p2p/bitcoin-core:external-signer - Include support for external wallet signer programs
 net-p2p/bitcoin-core:gui - Build and install Bitcoin-Qt GUI
-net-p2p/bitcoin-core:libs - Build and install libbitcoinconsensus
 net-p2p/bitcoin-core:nat-pmp - Enable NAT-PMP port forwarding
 net-p2p/bitcoin-core:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoin-core:sqlite - Support descriptor wallets in SQLite format
