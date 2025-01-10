@@ -33,13 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
-# Conrad Kostecki <conikost@gentoo.org> (2024-01-09)
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-01-10)
+# EAPI=7, maintainer needed, no reverse dependencies, fails to compile,
+# uses deprecated Go eclass.
+# Removal on 2025-02-09.  Bugs #947810, #856319, #844730, #771048, #679078.
+sys-cluster/zetcd
+
+# James Le Cuirot <chewi@gentoo.org> (2025-01-09)
+# Obsolete and needs to be dropped along with Qt5. The GTK theme has been
+# superseded by dev-qt/qtbase[gtk], which uses GTK 3 rather than GTK 2.
+# Removal on 2025-02-09. See bug #947787.
+dev-qt/qtstyleplugins
+
+# Conrad Kostecki <conikost@gentoo.org> (2025-01-09)
 # New version, which dropps support for legacy devices.
 # Will be unmasked, when split to legacy-branch is done.
 >=dev-libs/intel-compute-runtime-24.52.32224.5
 >=dev-util/intel-graphics-compiler-2.5.7
 
-# Andrey Grozin <grozin@gentoo.org> (2024-01-09)
+# Andrey Grozin <grozin@gentoo.org> (2025-01-09)
 # Unsupported old version, newer versions are not open-source.
 # Depends on Qt5.
 # Bugs 499030, 437262, 597268, 603592, 734890, 745495, 947740.
@@ -47,16 +59,16 @@
 # Removal on 2025-02-08.
 app-text/fbreader
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-09)
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-09)
 # Last release from 2017; fails to build w/ GCC-14 and qscintilla-2.14.1.
-# Depends on Qt5. Removal on 2025-02-08.
+# Depends on Qt5. Bugs #914918, #917408. Removal on 2025-02-08.
 dev-db/tora
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-08)
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-08)
 # Qt5-based library without any revdeps. Removal on 2025-02-07.
 dev-libs/kqoauth
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-08)
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-08)
 # Qt5-based library without any revdeps. Removal on 2025-02-07.
 dev-libs/qcoro5
 
@@ -137,13 +149,12 @@ acct-group/aspnet
 acct-user/aspnet
 www-servers/xsp
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-02)
-# No more revdeps, depends on Qt5. Removal on 2025-01-29.
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-02)
+# No more revdeps, depends on Qt5, bug #942178. Removal on 2025-01-29.
 dev-libs/libqt5pas
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-01)
-# Transitional package without any revdeps left.
-# Removal on 2025-01-31
+# Transitional package without any revdeps left. Removal on 2025-01-31
 kde-apps/konsolepart
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-01)
