@@ -33,13 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2025-01-30)
+# Breaks the only consumer of pytest-bdd (qutebrowser),
+# not looked into yet but mask for now as it prevents
+# using it to test PyQt6 for the upcoming Qt bump.
+>=dev-python/gherkin-official-31.0.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-30)
+# Last release 15 years ago, dead upstream (never imported from kdesvn),
+# no revdeps probably since amarok last-rites. Removal on 2025-02-27.
+media-libs/taglib-extras
+
 # Conrad Kostecki <conikost@gentoo.org> (2024-01-28)
 # A package, which depends on Qt5. Upstream dead for many years.
-# Removal on 2025-02-28.
+# Removal on 2025-02-28. Bug #948048
 net-wireless/linssid
 
 # Conrad Kostecki <conikost@gentoo.org> (2024-01-28)
-# Binary package, which depends on Qt5.
+# Binary package, which depends on Qt5. Bug #926665
 # Please update to v5 beta or v6 beta. Removal on 2025-02-28.
 media-sound/teamspeak-client:3
 
@@ -287,14 +298,6 @@ acct-group/aspnet
 acct-user/aspnet
 www-servers/xsp
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-02)
-# No more revdeps, depends on Qt5, bug #942178. Removal on 2025-01-29.
-dev-libs/libqt5pas
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-01)
-# Transitional package without any revdeps left. Removal on 2025-01-31
-kde-apps/konsolepart
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-01)
 # Broken with Qt6 and in wayland sessions. Archived upstream. Has been on life
 # support for several years already.
@@ -302,18 +305,6 @@ kde-apps/konsolepart
 media-video/vidify
 media-video/vidify-audiosync
 net-misc/lyricwikia
-
-# Sam James <sam@gentoo.org> (2024-12-31)
-# Many open bugs and requires a large amount of patching to build correctly
-# as a shared library. Breaks reverse dependencies in a few ways.
-# Removal on 2025-01-30. bug #924174 and friends.
-dev-libs/dmalloc
-
-# Michał Górny <mgorny@gentoo.org> (2024-12-29)
-# As of 3.1.0, upstream has removed all mocking and made it impossible
-# to test the package locally.  As such, we cannot maintain it going
-# forward.  Removal on 2025-01-28.  Bug #947144.
-dev-python/pslab
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.
