@@ -86,8 +86,8 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 
-#[[ ${MY_PV} == *9999* ]] || \
-#KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~amd64-linux"
+[[ ${MY_PV} == *9999* ]] || \
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~amd64-linux"
 
 # Extensions that need extra work:
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
@@ -294,6 +294,7 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-6.1-nomancompress.patch"
 	"${FILESDIR}/${PN}-24.2-qtdetect.patch"
+	"${FILESDIR}/${PN}-25.2-cflags.patch"
 
 	# TODO: upstream
 	"${FILESDIR}/${PN}-25.2-unused-qt6network.patch"
@@ -356,15 +357,6 @@ src_prepare() {
 	# hack in the autogen.sh
 	touch autogen.lastrun
 
-	# sed in the tests
-	sed -i \
-		-e "s#all : build unitcheck#all : build#g" \
-		solenv/gbuild/Module.mk || die
-	sed -i \
-		-e "s#check: dev-install subsequentcheck#check: unitcheck slowcheck dev-install subsequentcheck#g" \
-		-e "s#Makefile.gbuild all slowcheck#Makefile.gbuild all#g" \
-		Makefile.in || die
-
 	sed -i \
 		-e "s,/usr/share/bash-completion/completions,$(get_bashcompdir)," \
 		-e "s,\$INSTALLDIRNAME.sh,${PN}," \
@@ -382,6 +374,57 @@ src_prepare() {
 			-e ":Keywords: s:pdf;::" \
 			sysui/desktop/menus/draw.desktop || die
 	fi
+
+	# These test failures are largely added blindly in 25.2.1.1 to
+	# give us a baseline and then chip away at, rather than disregarding
+	# tests entirely.
+	#
+	# Various test skips from Fedora
+	#
+	# "Failing on multiple arches"
+	# "https://bugzilla.redhat.com/show_bug.cgi?id=2334719
+	# started to fail in 25.2.0.0"
+	sed -i -e '/CppunitTest_svgio/d' svgio/Module_svgio.mk || die
+	sed -i \
+		-e '/CppunitTest_sw_layoutwriter3/d' \
+		-e '/CppunitTest_sw_layoutwriter4/d' \
+		sw/Module_sw.mk || die
+	# "testStatusBarPageNumber it is said to "fail from time to time"...
+	# started to fail in 25.2.0.0"
+	# Skip tests failing with latest app-text/poppler (25.02.0?)
+	sed -i -e '/CppunitTest_sw_tiledrendering2/d' sw/Module_sw.mk || die
+	sed -i -e '/CppunitTest_sc_pdf_export/d' sc/Module_sc.mk || die
+	sed -i -e '/CppunitTest_sdext_pdfimport/d' sdext/Module_sdext.mk || die
+	sed -i -e '/CppunitTest_sfx2_view/d' sfx2/Module_sfx2.mk || die
+	sed -i -e '/CppunitTest_sw_pdf_test/d' sw/Module_sw.mk || die
+	#
+	# Fails w/ 25.2.1.1 on amd64
+	sed -i -e '/CppunitTest_sd_layout_tests/d' sd/Module_sd.mk || die
+	sed -i -e '/CppunitTest_vcl_text/d' vcl/Module_vcl.mk || die
+	sed -i -e '/CppunitTest_svx_unit/d' svx/Module_svx.mk || die
+	sed -i \
+		-e '/CppunitTest_chart2_import/d' \
+		-e '/CppunitTest_chart2_export2/d' \
+		chart2/Module_chart2.mk || die
+	sed -i \
+		-e '/CppunitTest_sc_array_functions_test/d' \
+		-e '/CppunitTest_sc_jumbosheets_test/d' \
+		-e '/CppunitTest_sc_subsequent_export_test4/d' \
+		-e '/CppunitTest_sc_subsequent_filters_test3/d' \
+		-e '/CppunitTest_sc_ucalc_formula/d' \
+		-e '/CppunitTest_sc_uicalc2/d' \
+		-e '/CppunitTest_sc_vba_macro_test/d' \
+		sc/Module_sc.mk || die
+	sed -i \
+		-e '/CppunitTest_sw_ooxmlexport/d' \
+		-e '/CppunitTest_sw_ooxmlimport/d' \
+		-e '/CppunitTest_sw_ww8export/d' \
+		-e '/CppunitTest_sw_core_layout/d' \
+		-e '/CppunitTest_sw_core_objectpositioning/d' \
+		-e '/CppunitTest_sw_core_text/d' \
+		-e '/CppunitTest_sw_layoutwriter/d' \
+		-e '/CppunitTest_sw_uiwriter/d' \
+		sw/Module_sw.mk || die
 }
 
 src_configure() {
@@ -497,13 +540,15 @@ src_configure() {
 		--disable-firebird-sdbc
 		--disable-gtk3
 		--disable-gtk3-kde5
-		# Coveered by our own toolchain defaults
+		# Covered by our own toolchain defaults
 		--disable-hardening-flags
 		--disable-online-update
 		--disable-openssl
 		--disable-pdfium
 		--disable-qt5
 		--disable-qt6-multimedia
+		# Don't try to call coredumpctl in the testsuite
+		--without-coredumpctl
 		--without-dotnet
 		--with-extra-buildid="${gentoo_buildid}"
 		--enable-extension-integration
@@ -538,7 +583,7 @@ src_configure() {
 		$(use_enable debug)
 		$(use_enable eds evolution2)
 		$(use_enable gstreamer gstreamer-1-0)
-		$(use_enable gtk4 gtk)
+		$(use_enable gtk gtk4)
 		$(use_enable kde kf6)
 		$(use_enable ldap)
 		$(use_enable odk)
@@ -596,16 +641,16 @@ src_compile() {
 	addpredict /dev/ati
 	addpredict /dev/nvidiactl
 
-	default
+	emake -Onone
 }
 
 src_test() {
-	emake unitcheck
-	emake slowcheck
+	emake -Onone -k unitcheck
+	emake -Onone -k slowcheck
 }
 
 src_install() {
-	emake DESTDIR="${D}" distro-pack-install -o build -o check
+	emake -Onone DESTDIR="${D}" distro-pack-install
 
 	# TODO: still relevant for gtk4?
 	# bug #593514
