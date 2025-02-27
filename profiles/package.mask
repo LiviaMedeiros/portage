@@ -33,6 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2025-02-27)
+# We have collected a lot of barely used Perl virtuals over time
+# (they effectively only make sense with version dependencies).
+# Time to clean up. In ebuilds, just depend on dev-lang/perl.
+# The following are masked for eventual removal:
+virtual/perl-Dumpvalue
+virtual/perl-IPC-Cmd
+virtual/perl-Memoize
+virtual/perl-Net-Ping
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-02-26)
 # Last release in 2005, last commit in 2013, dead as can be - does not
 # start, does not build, bugs #914927, #927337, #946657.
@@ -265,12 +275,6 @@ dev-qt/qtwebview:5
 # Will be unmasked, when split to legacy-branch is done.
 >=dev-libs/intel-compute-runtime-24.52.32224.5
 >=dev-util/intel-graphics-compiler-2.5.7
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2025-01-06)
-# Masked for testing
-=dev-lang/perl-5.40.1*
-~virtual/perl-File-Spec-3.910.0
-~virtual/perl-Module-CoreList-5.202.501.184_rc
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-03)
 # Contains a serious bug that can cause deletion of the users home dir.
