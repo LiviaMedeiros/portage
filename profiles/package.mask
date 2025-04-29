@@ -36,6 +36,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Jolly <kangie@gentoo.org> (2025-04-28)
+# Unmaintained in Gentoo, depends on masked x11-wm/fvwm,
+# SRC_URI uses mirror://gentoo and the files don't exist on mirrors.
+# Bug #949035; Removal on 2025-05-28 (with x11-wm/fvwm)
+x11-themes/fvwm_icons
+x11-themes/fvwm_sounds
+
+# Matt Jolly <kangie@gentoo.org> (2025-04-28)
+# Unmaintained in Gentoo, is not supported upstream,
+# and has a modern successor that does not bring in additional dependencies.
+# Migrate to x11-wm/fvwm3: https://github.com/fvwmorg/fvwm3/discussions/878
+# Bug #949035; removal on 2025-05-28.
+x11-wm/fvwm
+x11-themes/fvwm-themes
+x11-themes/fvwm-themes-extra
+=x11-themes/fvwm-crystal-3.7.5
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-28)
+# Package destabilisation mask for potential runtime errors and lack of
+# Qt6-compatible plugins. Bug #955031
+~sci-geosciences/qgis-3.38.3
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-04-26)
 # Dead upstream, stuck on Qt5, blocking x11-libs/qscintilla[qt5] cleanup
 # Bug #947297; removal on 2025-05-26
@@ -131,18 +153,6 @@ x11-misc/xtoolwait
 # SRC_URI is long gone. Many alternative image viewers.
 # Removal on 2025-05-04.  Bug #953119.
 media-gfx/xloadimage
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-02)
-# Depends on Qt5WebEngine, and upstream seem to be having a hard time
-# porting to Qt6 with an unknown ETA likely well beyond the time we want
-# to keep dev-qt/qtwebengine:5 in ::gentoo.
-# Removal on 2025-04-30. Bug #926666
-media-video/jellyfin-media-player
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-02)
-# No release since 2021, no commit in 3 years, depends on Qt5WebEngine.
-# Use app-text/uchmviewer instead. Removal on 2025-04-30. Bug #823008
-app-text/kchmviewer
 
 # Ionen Wolkens <ionen@gentoo.org> (2025-04-02)
 # Masked for testing the new .0 version and leave time for packages
