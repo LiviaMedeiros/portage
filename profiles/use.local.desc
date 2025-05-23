@@ -6080,8 +6080,6 @@ net-irc/soju:moderncsqlite - Use moderncsqlite, a cgo-free port of SQLite
 net-irc/unrealircd:class-nofakelag - Enable an unsupported class::options flag called “nofakelag” allowing you to grant fakelag exemption to normal user (instead of just opers).
 net-irc/unrealircd:operoverride - Enable OperOverride extension
 net-irc/unrealircd:operoverride-verify - Enable requiring opers to invite themselves to +s/+p channels
-net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
-net-irc/unrealircd:showlistmodes - Display channel modes in /LIST (only configured at compiletime)
 net-irc/weechat:alias - Enable plugin for alias control
 net-irc/weechat:buflist - Enable buflist plugin
 net-irc/weechat:charset - Enable encoding conversions
@@ -7696,6 +7694,7 @@ sci-ml/XNNPACK:assembly - Build with assembly micro-kernels
 sci-ml/XNNPACK:jit - Build with JIT micro-kernels
 sci-ml/XNNPACK:memopt - Build with optimized memory allocation scheme
 sci-ml/XNNPACK:sparse - Build with graph rewriting for sparse inference
+sci-ml/caffe2:cusparselt - Use the CUDA Sparse Matrix Multiplication
 sci-ml/caffe2:distributed - Support distributed applications
 sci-ml/caffe2:fbgemm - Use sci-ml/FBGEMM
 sci-ml/caffe2:flash - Enable flash attention
@@ -8211,6 +8210,7 @@ sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zbd - Enable sys-block/libzbd bluestore backend
 sys-cluster/charliecloud:ch-image - Build the internal builder ch-image (previously named ch-grow)
+sys-cluster/charliecloud:fuse - Enable FUSE support for mounting squashfs images
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
 sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
@@ -8527,7 +8527,6 @@ sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
-sys-libs/libnvme:uring - uring support via sys-libs/liburing
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
 sys-libs/libseccomp:experimental-loong - Add experimental LoongArch patchset
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available

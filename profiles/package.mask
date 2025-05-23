@@ -36,6 +36,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2025-05-23)
+# Severe memory leak (bug #953874)
+=app-i18n/ibus-anthy-1.5.17
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-23)
+# Package destabilisation mask. There is simply no need for this without
+# any stable consumers, and it is freeing up resources.
+# 5.2.10.1 is available in ~arch.
+~media-libs/allegro-5.2.7.0
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-22)
 # Even if Qt5 is optional here, it is dead upstream for close to 10 years
 # and without Gentoo package maintainer almost as long. Bug #926074.
@@ -63,12 +73,6 @@ x11-misc/meteo
 # Introduces REQUIRED_USE that needs more discussion (bug #956402)
 =media-gfx/gimp-3.0.2-r2
 =media-gfx/gimp-3.0.4
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-05-21)
-# Seems to be some bad interaction between this version and gpep517
-# that prevents installing the (successfully) produced wheel, mask
-# while being looked into (bug #956382).
-~dev-python/sip-6.11.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-20)
 # Unaddressed pending version bumps for almost 2 years, stuck on EAPI-7.
@@ -142,6 +146,9 @@ dev-util/intel_clc
 # https://jira.mariadb.org/browse/MDEV-36759
 # https://jira.mariadb.org/browse/MDEV-36765
 # https://jira.mariadb.org/browse/MDEV-36766
+#
+# Affected packages were removed from the tree, but this message shall be kept
+# untill 2025-06-23.
 ~dev-db/mariadb-10.11.12
 ~dev-db/mariadb-11.4.6
 
