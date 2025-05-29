@@ -36,6 +36,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (2025-05-28)
+# I added this for SageMath, but in hindsight do not think anyone is
+# using it. It has code issues and upstream is not terribly interested
+# in fixing it. (They are active and helpful, just not in love with this
+# particular codebase.) Bug 940232. Removal after 30 days.
+dev-gap/cohomolo
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-27)
 # Dead upstream with no release for over 10 years, Qt5-based even only by
 # means of a snapshot. Bugs #951875, #953016. Removal on 2025-06-26.
@@ -739,7 +746,10 @@ media-plugins/kodi-game-libretro-dosbox
 # Masked for more testing especially of reverse-deps.
 # ogre 1.11/1.12 breakage: bug #834468
 # ogre 2.x breakage: bug #740424
->=dev-games/ogre-1.11.2
+dev-games/ogre:0/1.12
+dev-games/ogre:0/2.1
+dev-games/ogre:0/13.6
+dev-games/ogre:0/14.3
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2018-09-11)
 # Mask transition ebuilds that were needed only for <glibc-2.26
