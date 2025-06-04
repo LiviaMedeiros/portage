@@ -36,6 +36,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-06-04)
+# Breaks at least app-office/scribus and media-gfx/inkscape right now.
+# Bugs #957137, #957138
+~app-text/poppler-25.06.0
+
+# Sam James <sam@gentoo.org> (2025-06-03)
+# Major changes to packaging as bindings are split out by upstream.
+>=app-crypt/gpgme-2
+dev-cpp/gpgmepp
+dev-libs/qgpgme
+dev-python/gpgmepy
+
 # Sam James <sam@gentoo.org> (2025-06-03)
 # Fetching from GitHub seems broken with this:
 # > Connecting to github.com|20.26.156.215|:443... connected.
