@@ -3763,7 +3763,6 @@ llvm-runtimes/compiler-rt-sanitizers:safestack - Build SafeStack runtime.
 llvm-runtimes/compiler-rt-sanitizers:scudo - Build Scudo Hardened Allocator.
 llvm-runtimes/compiler-rt-sanitizers:shadowcallstack - Build ShadowCallStack.
 llvm-runtimes/compiler-rt-sanitizers:tsan - Build Thread Sanitizer runtime.
-llvm-runtimes/compiler-rt-sanitizers:tysan - Build Type Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:ubsan - Build Undefined Behavior Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:xray - Build XRay runtime.
 llvm-runtimes/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
@@ -4501,6 +4500,7 @@ media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
 media-libs/openimageio:fits - Enable support for NASA's sci-libs/cfitsio library
 media-libs/openimageio:gui - Build iv
+media-libs/openimageio:libcxx - Build against llvm-runtimes/libcxx when using clang
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
