@@ -338,6 +338,7 @@ MULTILIB_WRAPPED_HEADERS=(
 
 PATCHES=(
 	"${FILESDIR}"/ffmpeg-6.1-opencl-parallel-gmake-fix.patch
+	"${FILESDIR}"/ffmpeg-7.1.1-npp13.patch
 )
 
 pkg_pretend() {
@@ -386,22 +387,22 @@ src_prepare() {
 	# respect user preferences
 	sed -i '/cflags -fdiagnostics-color/d' configure || die
 
-	# handle *FLAGS here to avoid repeating for each ABI below (bug #923491)
+	# handle here to avoid repeating for each ABI below (bug #923491)
 	FFMPEG_ENABLE_LTO=
 	if tc-is-lto; then
 		: "$(get-flag -flto)" # get -flto=<val> (e.g. =thin)
 		FFMPEG_ENABLE_LTO=--enable-lto${_#-flto}
 	fi
 	filter-lto
-
-	if use npp; then
-		local cuda=${ESYSROOT}/opt/cuda/targets/$(usex amd64 x86_64 sbsa)-linux
-		append-cppflags -I"${cuda}"/include
-		append-ldflags -L"${cuda}"/lib
-	fi
 }
 
 multilib_src_configure() {
+	if use npp && multilib_is_native_abi; then
+		local -x CPPFLAGS=${CPPFLAGS} LDFLAGS=${LDFLAGS}
+		append-cppflags $($(tc-getPKG_CONFIG) --cflags nppc || die)
+		append-ldflags $($(tc-getPKG_CONFIG) --libs-only-L nppc || die)
+	fi
+
 	local conf=( "${S}"/configure ) # not autotools-based
 
 	local prefix=${EPREFIX}/usr
