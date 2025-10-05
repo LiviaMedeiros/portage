@@ -4,7 +4,7 @@
 EAPI=8
 
 CMAKE_MAKEFILE_GENERATOR="emake"
-inherit bash-completion-r1 cmake
+inherit bash-completion-r1 cmake shell-completion
 
 DESCRIPTION="Taskwarrior is a command-line todo list manager"
 HOMEPAGE="https://taskwarrior.org/"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm arm64 x86 ~x64-macos"
+KEYWORDS="amd64 ~arm arm64 x86 ~x64-macos"
 IUSE="+sync"
 
 DEPEND="
