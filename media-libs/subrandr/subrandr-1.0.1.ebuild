@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="MPL-2.0"
 LICENSE+=" MIT Unicode-3.0 Unicode-DFS-2016 ZLIB" # crates
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~riscv ~x86"
 
 RDEPEND="
 	media-libs/fontconfig
@@ -29,11 +29,8 @@ DEPEND="${RDEPEND}"
 QA_FLAGS_IGNORED="usr/lib.*/lib${PN}.*"
 
 src_compile() {
-	# xtask is bundled builder aliased in .cargo/config.toml
-	# - does not have its own test handler so regular `cargo test`
-	#   will end up rebuilding everything
-	# - cannot be easily configured to support cargo.eclass'
-	#   USE=debug and it is currently a no-op (masked)
+	# xtask is bundled builder aliased in .cargo/config.toml, note that
+	# it lacks its own test handler causing `cargo test` to rebuild
 	edo cargo xtask build --verbose
 }
 
