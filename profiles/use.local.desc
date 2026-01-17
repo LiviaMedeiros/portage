@@ -7021,9 +7021,7 @@ net-vpn/strongswan:strongswan_plugins_lookip - Enable support for the lookip plu
 net-vpn/strongswan:strongswan_plugins_md4 - Enable support for the md4 plugin
 net-vpn/strongswan:strongswan_plugins_md5 - Enable support for the md5 plugin
 net-vpn/strongswan:strongswan_plugins_mgf1 - Enable support for the mgf1 plugin
-net-vpn/strongswan:strongswan_plugins_newhope - Enable plugin that allows key exchange based on post-quantum computer New Hope algorithm
 net-vpn/strongswan:strongswan_plugins_nonce - Enable support the nonce plugin
-net-vpn/strongswan:strongswan_plugins_ntru - Enable support for the ntru plugin
 net-vpn/strongswan:strongswan_plugins_openxpki - Enable OCSP responder accessing OpenXPKI MySQL/MariaDB certificate database
 net-vpn/strongswan:strongswan_plugins_padlock - Enable support for the padlock plugin
 net-vpn/strongswan:strongswan_plugins_pem - Enable support for the pem plugin
@@ -7494,7 +7492,6 @@ sci-libs/netcdf:hdf - Build with HDF4 read capability(sci-libs/hdf, sci-libs/hdf
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/openblas:cpudetection - Build dynamic architecture detection at run time (for multi targets)
-sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
 sci-libs/openblas:index64 - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threading model
