@@ -36,6 +36,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-01-24)
+# Needs porting to Python 3.13.  Requires old versions of multiple
+# dependencies, and reportedly is already broken with its current
+# dependencies.  The efforts to revive it do not progress.
+# Removal on 2026-02-23.  Bug #944883, #952290, #955765, #968383.
+dev-embedded/platformio
+
 # Maciej Barć <xgqt@gentoo.org> (2026-01-24)
 # Some app-emacs packages that are obsolete since Emacs 29 or much
 # older. They all are available in the main GNU Emacs distribution.
@@ -153,12 +160,6 @@ media-sound/mp3diags
 # is overwhelming to human maintainers of this package.
 >=dev-python/autobahn-25.10
 >=dev-python/txaio-25.10
-
-# Hans de Graaff <graaff@gentoo.org> (2025-12-11)
-# The twitter API is no longer available making this package
-# useless. Upstream has archived the gem and refers to an X gem as an
-# alternative. Removal on 2026-01-11.
-dev-ruby/twitter
 
 # Michael Orlitzky <mjo@gentoo.org> (2025-12-08)
 # An experimental attempt to avoid the gtk -> librsvg -> rust dependency
