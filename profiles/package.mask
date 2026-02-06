@@ -36,6 +36,23 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2026-02-06)
+# Abandoned upstream, no other distro packages this anymore, lots of QA and
+# build issues. Removal on 2026-03-08. Bug #899932.
+net-analyzer/ipcad
+
+# David Seifert <soap@gentoo.org> (2026-02-06)
+# Upstream disappeared, no other distro packages this anymore, lots of QA and
+# build issues. Removal on 2026-03-08. Bug #680718.
+net-analyzer/arp-sk
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2026-02-06)
+# Marked as pre-release post release itself. Released without
+# maintainer ACK.
+# See-Also: https://github.com/emersion/slurp/issues/187
+# Bug #969685
+=gui-apps/slurp-1.6.0
+
 # Michał Górny <mgorny@gentoo.org> (2026-01-24)
 # Needs porting to Python 3.13.  Requires old versions of multiple
 # dependencies, and reportedly is already broken with its current
@@ -721,7 +738,7 @@ media-plugins/kodi-game-libretro-dosbox
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-libs/glibc-2.40-r8
+<sys-libs/glibc-2.41-r10
 <sys-libs/binutils-libs-2.44
 <sys-devel/binutils-2.44
 <sys-devel/binutils-hppa64-2.44
