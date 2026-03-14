@@ -3101,11 +3101,13 @@ games-emulation/bsnes-jg:shared - Build shared library
 games-emulation/desmume:gdb - Enable support for the remote GDB stub
 games-emulation/desmume:openal - Use media-libs/openal for microphone input
 games-emulation/desmume:wifi - Enable support for Wi-Fi (experimental and discouraged)
+games-emulation/dolphin:discord - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:discord-presence - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:evdev - Enable evdev input support
 games-emulation/dolphin:llvm - Enables LLVM support, for disassembly
 games-emulation/dolphin:log - Increase logging output
-games-emulation/dolphin:mgba - Enables GBA controllers emulation using libmgba.
+games-emulation/dolphin:mgba - Enables GBA controllers emulation with games-emulation/mgba
+games-emulation/dolphin:retro-achievements - Enables integration with retroachievements.org
 games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better performance but requiring more build time
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
@@ -5529,7 +5531,6 @@ net-analyzer/nagios-plugins-linux-madrisan:curl - Build check_container which re
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
 net-analyzer/net-snmp:kmem - Enable usage of /dev/kmem
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
-net-analyzer/net-snmp:netlink - Use dev-libs/libnl to fetch TCP statistics instead of using /proc/net/tcp (Linux only).
 net-analyzer/net-snmp:pcap - Install snmppcap which reads from PCAP files and writes to the SNMP transport
 net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up network interface description. This feature is only available on Linux.
 net-analyzer/net-snmp:pcre - Add support for Perl Compatible Regular Expressions in process table filtering.
