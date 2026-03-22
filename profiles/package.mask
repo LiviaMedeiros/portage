@@ -36,6 +36,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-03-22)
+# Cyclic dependency through dev-python/vcs-versioning →
+# dev-python/hatchling → dev-python/pluggy.
+>=dev-python/setuptools-scm-10
+dev-python/vcs-versioning
+
 # Michał Górny <mgorny@gentoo.org> (2026-03-20)
 # Low-value package with a test suite that requires tons of effort to
 # work offline. Upstream made that harder again in the most recent
@@ -232,7 +238,7 @@ media-plugins/vdr-skinelchi
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
 # Masked for testing and possible libvlc revdeps breakage.
-~media-video/vlc-4.0.0_pre20260215
+~media-video/vlc-4.0.0_pre20260320
 
 # Conrad Kostecki <conikost@gentoo.org> (2026-02-15)
 # Supports only Qt5 and upstream not making any progress towards Qt6.
