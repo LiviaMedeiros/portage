@@ -814,6 +814,7 @@ app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spe
 app-i18n/fcitx:keyboard - Enable key event translation with XKB and build keyboard engine
 app-i18n/fcitx:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
+app-i18n/fcitx:system-yoga - Use the system-wide dev-libs/yogainstead of bundled.
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
 app-i18n/fcitx-chinese-addons:data - Build data
 app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
@@ -4617,6 +4618,8 @@ media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec
 media-libs/speex:vbr - Enable VBR support.
 media-libs/suil:gtk2 - Enable GTK2 based GUI support
 media-libs/svgalib:kernel-helper - Build the helper kernel module
+media-libs/svt-av1:pgo - Optimize the build using Profile Guided Optimization (PGO)
+media-libs/svt-av1:tools - Build SvtAv1EncApp
 media-libs/tiff:libdeflate - Faster Deflate support with app-arch/libdeflate
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
