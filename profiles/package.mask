@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-03-25)
+# Broken with >=dev-python/numpy-2.  Unmaintained.  No revdeps.
+# Removal on 2026-04-24.  Bug #962941.
+dev-python/amodem
+
 # Ionen Wolkens <ionen@gentoo.org> (2026-03-23)
 # Masked for testing the new .0 version and leave time for packages
 # to catch up on support. Will likely be kept masked until 6.11.1
@@ -106,6 +111,7 @@
 # Michał Górny <mgorny@gentoo.org> (2026-03-22)
 # Cyclic dependency through dev-python/vcs-versioning →
 # dev-python/hatchling → dev-python/pluggy.
+# https://github.com/pypa/setuptools-scm/issues/1302
 >=dev-python/setuptools-scm-10
 dev-python/vcs-versioning
 
@@ -297,18 +303,6 @@ net-mail/mailbox-count
 # new version) gets stable.
 >=net-wireless/soapysdrplay-20000000
 
-# David Seifert <soap@gentoo.org> (2026-02-14)
-# Behemoth package, with a massive and brittle testsuite. No other major distro
-# packages this anymore. Lots of QA issues, broken tests and blocking cleanup
-# efforts. This package will only be allowed back in ::gentoo after a sustained
-# demonstration of maintenance dedication. Removal on 2026-03-16. Bug #966712.
-dev-cpp/muParserX
-dev-python/pylatexenc
-dev-python/python-constraint
-dev-python/qiskit
-dev-python/qiskit-aer
-dev-python/rustworkx
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-12)
 # Misc Qt5-based libraries without any revdeps left.
 # Removal on 2026-03-14.
@@ -391,12 +385,6 @@ net-analyzer/echoping
 <=dev-libs/hyprland-protocols-0.6.4
 <=dev-libs/hyprgraphics-0.1.5
 <=gui-wm/hyprland-0.51.1
-
-# Michał Górny <mgorny@gentoo.org> (2026-02-09)
-# setuptools-82 removes pkg_sources, inevitably leading to breakage.
->=dev-python/ensurepip-setuptools-82
->=dev-python/setuptools-82
->=dev-python/types-python-dateutil-2.9.0.20260323
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-08)
 # All remaining KF5 revdeps have been masked.
@@ -534,10 +522,6 @@ net-analyzer/arp-sk
 # any data/messages using this librnp version. <0.18 is fine as is >=0.18.1.
 # See bug #966299.
 =dev-util/librnp-0.18.0
-
-# Sam James <sam@gentoo.org> (2025-10-13)
-# Crashes in memtodest when handling PATH. Not yet reported upstream.
-=app-shells/dash-0.5.13.1
 
 # Michał Górny <mgorny@gentoo.org> (2025-10-12)
 # Requires Rust with RUST_SYSROOTS=bpf, which isn't currently supported
