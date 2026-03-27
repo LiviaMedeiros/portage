@@ -61,6 +61,7 @@ fi
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.9_p20251029-rump-link.patch
+	"${FILESDIR}"/${PN}-0.9_p20251029-libports-iterate-refcount.patch
 )
 
 src_prepare() {
@@ -130,7 +131,9 @@ src_configure() {
 			--with-libcrypt
 			--with-libbz2
 			--with-libz
-			# configure really wants parted (may be needed for rump too)
+			# configure really wants parted
+			# it's also essential for rumpdisk:
+			# https://lists.gnu.org/r/bug-hurd/2023-05/msg00405.html
 			--with-parted
 
 			$(use_enable ncurses ncursesw)
@@ -149,6 +152,9 @@ src_compile() {
 	if use headers-only ; then
 		return
 	elif is_crosspkg ; then
+		# For the crossdev-built Hurd, we need to build enough s.t.
+		# for the sysroot cross-built Hurd, its deps can be compiled
+		# first (e.g. sys-block/parted, sys-kernel/rumpkernel).
 		emake \
 			lib-subdirs="libshouldbeinlibc libihash libstore libirqhelp" \
 			prog-subdirs= \
