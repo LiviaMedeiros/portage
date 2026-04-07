@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-04-07)
+# This version had a mindless runtime dependency check that caused
+# importing requests to print warnings that broke random stuff.
+=dev-python/requests-2.32.5
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-04-06)
 # Obsolete KF5/KF6-transitional -common packages w/o any consumers left.
 # Removal on 2026-05-06.
@@ -262,20 +267,6 @@ dev-tcltk/tablelist
 # Last consumer was net-p2p/freenet-0.7.5_p1505-r0.
 # Removal on 2026-04-10. Bug #971058.
 dev-java/mersennetwister
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-03-09)
-# Latest release is >21 years old, no one else packages this, buffer overflow
-# at launch, packaged only in gentoo. Alternatives exist, including the dockapp
-# x11-plugins/wmamixer. Bug #969091
-# Removal on 2026-04-08.
-media-sound/alsamixer-app
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-03-09)
-# Dead CORBA implementation, no one else packages this, impossible to build.
-# Many bugs: #298101, #515938, #725192, #871237, #874090, #882479, #882633,
-# #898086, #919509, #952927, #967177
-# Removal on 2026-04-08.
-net-misc/mico
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2026-03-09)
 # Live only package, Upstream archived, integrated into
