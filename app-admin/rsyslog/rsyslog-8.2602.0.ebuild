@@ -19,7 +19,7 @@ else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${PV}.tar.gz
 		-> ${P}.gh.tar.gz"
 
-	KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
+	KEYWORDS="amd64 ~arm arm64 ~hppa ~ppc64 ~riscv x86"
 fi
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
@@ -286,7 +286,7 @@ src_test() {
 		_has_increased_ulimit="true"
 	fi
 
-	if ! emake --jobs 1 check; then
+	if ! emake check ; then
 		eerror "Test suite failed! :("
 
 		if [[ -z "${_has_increased_ulimit}" ]]; then
@@ -297,7 +297,6 @@ src_test() {
 			eerror "Please try to reproduce the test suite failure with FEATURES=-userpriv " \
 				"before you submit a bug report."
 		fi
-
 	fi
 }
 
