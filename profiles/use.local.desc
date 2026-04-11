@@ -2419,7 +2419,6 @@ dev-python/amqp:extras - Install extra tools to generate initial Python mod from
 dev-python/apprise:dbus - Support sending notifications to the desktop over D-Bus
 dev-python/apprise:mqtt - Support sending notifications over MQTT
 dev-python/authlib:django - Enable Django framework support
-dev-python/authlib:flask - Enable Flask framework support
 dev-python/authlib:jose - Enable JSON Object Signing and Encryption (JOSE) support via dev-python/pycryptodome
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/blake3:rust - Build the Rust implementation (if disabled, the "experimental" C implementation is used instead).
@@ -6013,11 +6012,9 @@ net-irc/inspircd:argon2 - Enable Argon2 hashes in modules
 net-irc/inspircd:gnutls - Enable TLS support
 net-irc/inspircd:log-json - Enable logging via JSON
 net-irc/inspircd:maxminddb - Enable geolocation support via dev-libs/libmaxminddb
-net-irc/inspircd:mbedtls - Add support for TLS using the mbedTLS library
 net-irc/inspircd:pcre2 - Add support for Perl Compatible Regular Expressions 2
 net-irc/inspircd:re2 - Add support for Google RE2 regular expressions library
 net-irc/inspircd:regex-posix - Add support for POSIX Regular Expressions
-net-irc/inspircd:regex-stdlib - Add support for C++ stdlib regular expressions
 net-irc/inspircd:ssl - Enable SSL support
 net-irc/inspircd:sslrehashsignal - Enable rehashing SSL module by SIGUSR1
 net-irc/inspircd:tre - Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library
@@ -7904,19 +7901,14 @@ sys-apps/flashrom:stlinkv3-spi - Enable SPI programmer using STLINK-V3
 sys-apps/flashrom:tools - Install ich_descriptor_tool, a tool for reading descriptor-mode SPI-flash images for Intel chipsets
 sys-apps/flashrom:usbblaster-spi - Enable support for Altera USB-Blaster dongles
 sys-apps/fwupd:amdgpu - Build and install AMD dGPU (Navi3x and above) plugin
-sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:archive - Use app-arch/libarchive for archives support
 sys-apps/fwupd:cbor - Enable CBOR support for coSWID and uSWID via dev-libs/libcbor
-sys-apps/fwupd:fastboot - Build and install fastboot plugin
 sys-apps/fwupd:flashrom - Enable flashrom plugin via sys-apps/flashrom
-sys-apps/fwupd:gusb - Enable dev-libs/libgusb support
-sys-apps/fwupd:logitech - Build and install Logitech bulk controller plugin
 sys-apps/fwupd:modemmanager - Build and install Modem Manager plugin
 sys-apps/fwupd:nvme - Build and install NVMe plugin
 sys-apps/fwupd:protobuf - Enable protobuf plugins
 sys-apps/fwupd:spi - Install Intel-SPI plugin
 sys-apps/fwupd:synaptics - Install synaptics plugin
-sys-apps/fwupd:test-full - Enable tests known not to play nicely with the sandbox
 sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - Use dev-libs/mpfr for high precision arithmetic (-M / --bignum)
@@ -8547,6 +8539,8 @@ sys-libs/libblockdev:nvme - Add nvme support via sys-libs/libnvme
 sys-libs/libblockdev:smart - Add SMART support via sys-apps/smartmontools
 sys-libs/libblockdev:tools - Build tools
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
+sys-libs/libcap-ng:bpf - Install cap-audit utility which uses the extended Berkeley Packet Filter (eBPF).
+sys-libs/libcap-ng:deprecated - Install deprecated captest utility.
 sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c

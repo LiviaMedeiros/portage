@@ -36,6 +36,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-04-11)
+# NIH general purpose library.  Tests are failing.  No revdeps.
+# Removal on 2026-05-11.  Bug #942586.
+dev-python/pockets
+
+# Michał Górny <mgorny@gentoo.org> (2026-04-11)
+# dev-python/flask-sqlalchemy is unmaintained upstream, and has tons
+# of test failures with modern dev-python/sqlalchemy versions.
+# net-mail/automx2 has no Gentoo maintainer, and is its only revdep.
+# Removal on 2026-05-11.  Bug #972541.
+acct-group/automx2
+acct-user/automx2
+dev-python/flask-migrate
+dev-python/flask-sqlalchemy
+net-mail/automx2
+
 # Ulrich Müller <ulm@gentoo.org> (2026-04-09)
 # No longer serves any purpose. The mail desktop files are installed
 # by >=app-emacs/emacs-common-1.14 for all GNU Emacs (USE=gui) users.
@@ -268,22 +284,10 @@ www-servers/nginx-unit
 # Removeal on 2026-04-12. Bug #971127
 dev-tcltk/tablelist
 
-# Arthur Zamarin <arthurzam@gentoo.org> (2026-03-09)
-# Live only package, Upstream archived, integrated into
-# app-shells/bash-completion-2.17.0, which was already stabled.
-# Removal on 2026-04-08.  Bugs #792303, #960480.
-app-shells/tmux-bash-completion
-
 # Alfredo Tupone <tupone@gentoo.org> (2026-03-05)
 # Need more testing
 >=dev-lang/tcl-9
 >=dev-lang/tk-9
-
-# Michał Górny <mgorny@gentoo.org> (2026-02-28)
-# The test suite is broken since 1.16.0 (Nov 2025), and upstream did not
-# address the problem so far: https://github.com/pypa/hatch/issues/2123
-# Removal on 2026-03-30.  Bug #970681.
-dev-python/hatch
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-27)
 # Obsolete Qt5 non-qtbase modules without revdeps.
