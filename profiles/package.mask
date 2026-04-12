@@ -36,6 +36,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Perpetually stuck on Qt5. Recent releases made under the influence of AI.
+# A Qt6-based snapshot is provided for testing without keywords, currently as
+# app-admin/keepassxc-2.8.0_pre260316-r1, but it is unclear when keywords will
+# be restored let alone stabilised.
+# Alternatives are app-admin/keepass, app-admin/pass which can import kbdx
+# files, app-admin/vaultwarden, app-admin/bitwarden-desktop-bin and probably
+# many more.  AppImage or Flatpak versions also available as last resort.
+# Bugs #949231, #967905.
+# Removal on 2026-05-11.
+<=app-admin/keepassxc-2.7.9999
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Depends on Qt5 and does not appear to be ported to Qt6. A possible alternative
+# is net-misc/remmina's x2go plugin, but it requires interested parties to look
+# into it. Bugs #538458, #917570, #955192
+# Removal on 2026-05-11.
+net-misc/x2goclient
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Depending on Qt5 with solarus-1.6.5 being broken by missing deps and at
+# least GCC-15. Bugs #953383 (+ linked see-also bugs), #961916, #962015
+# Both games-rpg/zsdx and games-rpg/zsxd are potentially fixed for Solarus 2.0
+# in git master, but that requires someone motivated enough to try it out.
+# Removal on 2026-05-11.
+<games-engines/solarus-2.0.3
+<games-misc/solarus-quest-editor-2.0.3
+<games-rpg/zsdx-1.12.9999
+<games-rpg/zsxd-1.12.9999
+
 # Michał Górny <mgorny@gentoo.org> (2026-04-11)
 # NIH general purpose library.  Tests are failing.  No revdeps.
 # Removal on 2026-05-11.  Bug #942586.
@@ -309,10 +339,6 @@ dev-qt/qtwebsockets:5
 # on VLC-3. Bug #935797  Removal on 2026-03-26.
 media-libs/phonon
 media-libs/phonon-vlc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
-# Masked for testing and possible libvlc revdeps breakage.
-~media-video/vlc-4.0.0_pre20260320
 
 # Thomas Beierlein <tomjbe@gentoo.org> (2026-02-14)
 # Move ebuild versioning to classical x.y.z number scheme
