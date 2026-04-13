@@ -36,8 +36,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-04-13)
+# dev-python/tempest is needed only for OpenStack integration tests.
+# Incompatible with py3.14.  All the revdeps were mistaken.  Includes
+# dependencies without other revdeps.
+# Removal on 2026-05-13.  Bug #972619.
+dev-python/oslo-concurrency
+dev-python/stestr
+dev-python/tempest
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
-# Perpetually stuck on Qt5. Recent releases made under the influence of AI.
+# Perpetually stuck on Qt5 despite recent releases made under the influence of AI.
 # A Qt6-based snapshot is provided for testing without keywords, currently as
 # app-admin/keepassxc-2.8.0_pre260316-r1, but it is unclear when keywords will
 # be restored let alone stabilised.
@@ -298,16 +307,6 @@ dev-python/uv-dynamic-versioning
 # https://sqlite.org/releaselog/3_52_0.html
 =dev-db/sqlite-3.52.0-r1
 =dev-python/apsw-3.52.0.0
-
-# Mike Pagano <mpagano@gentoo.org> (2026-03-13)
-# Upstream has announced the archiving of this application
-# at repo location: https://github.com/nginx/unit/
-# This announcement includes the statement that security
-# issues may not be addressed. Possible alternatives
-# are www-servers/nginx or www-servers/apache
-# depending on your application needs.
-# Removal on 2026-04-13.
-www-servers/nginx-unit
 
 # Alfredo Tupone <tupone@gentoo.org> (2026-03-12)
 # No reverse dependency. Included in dev-tcltk/tklib
