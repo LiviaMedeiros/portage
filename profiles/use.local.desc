@@ -27,6 +27,7 @@ app-accessibility/espeak-ng:l10n_ru - Builds extended Russian Dictionary file
 app-accessibility/espeak-ng:l10n_zh - Builds extended Chinese (Mandarin and Cantonese) Dictionary files
 app-accessibility/espeak-ng:man - Builds and installs manpage with app-text/ronn-ng
 app-accessibility/espeak-ng:mbrola - Adds support for mbrola voices
+app-accessibility/espeak-ng:sonic - Enable audio speed up support with media-libs/sonic
 app-accessibility/flite:voices - Install synthetic voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
@@ -2123,6 +2124,7 @@ dev-libs/libjcat:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls
 dev-libs/libjwt:openssl - Use openssl libs for crypto functions
 dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
 dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
+dev-libs/liblouis:tools - Enable python bindings and tools for testing and debugging tables
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
