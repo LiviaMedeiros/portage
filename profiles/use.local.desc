@@ -4661,6 +4661,7 @@ media-libs/zita-resampler:tools - Install zresample and zretune tools
 media-libs/zmusic:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
 media-libs/zvbi:proxy - Share V4L and V4L2 VBI devices between multiple applications
 media-libs/zxing-cpp:experimental - Enable experimental features via media-libs/zint
+media-libs/zxing-cpp:tools - Install ZXingReader and ZXingWriter binaries
 media-plugins/alsa-plugins:arcam_av - Enables Arcam AV control plugin
 media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin
@@ -6504,6 +6505,7 @@ net-misc/inetutils:uucpd - Enable uucpd
 net-misc/inetutils:whois - Enable whois
 net-misc/iputils:arping - Build and install arping -- tool for sending ARP requests to peers (see also net-analyzer/arping)
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
+net-misc/iputils:suid - If filecaps are disabled, install binaries with suid bit enabled
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
 net-misc/ipv6calc:apache - Build the apache module mod_ipv6calc
 net-misc/ipv6calc:openssl - Use dev-libs/openssl instead of app-crypt/libmd for MD5 digest
