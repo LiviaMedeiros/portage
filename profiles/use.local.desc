@@ -3890,9 +3890,7 @@ mail-client/mutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and tra
 mail-client/mutt:gsasl - Use GNU SASL via net-misc/gsasl instead of Cyrus SASL (requires USE=sasl)
 mail-client/mutt:hcache - Enable header cache, one database backend needs to be enabled
 mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
-mail-client/mutt:pgp-classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/mutt:pop - Enable support for POP3 mailboxes
-mail-client/mutt:smime-classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
 mail-client/neomutt:autocrypt - Enable autocrypt.org support
@@ -8562,7 +8560,7 @@ sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operation
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
 sys-libs/libxcrypt:headers-only - Build and install only the headers. This is mostly useful for toolchain bootstrapping, to avoid circular deps.
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
-sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
+sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip, allowing minizip-ng to replace it. Only enable if you want to replace reference minizip with minizip-ng.
 sys-libs/minizip-ng:openssl - Use dev-libs/openssl for further encryption capabilities
 sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the Ada programming language
