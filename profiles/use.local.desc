@@ -7272,6 +7272,7 @@ sci-geosciences/gpsd:latency-timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/grass:geos - Use sci-libs/geos for v.buffer and adds extended options to the v.select module
+sci-geosciences/grass:lfs - Support large files (>2GB) on 32-bit systems
 sci-geosciences/grass:pdal - Enable support for PDAL for point clouds via sci-libs/pdal
 sci-geosciences/grass:svm - Enable support for the Support Vector Machine library sci-libs/libsvm
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
@@ -8051,7 +8052,6 @@ sys-apps/systemd:gcrypt - Enable use of dev-libs/libgcrypt for various features
 sys-apps/systemd:homed - Enable portable home directories
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
-sys-apps/systemd:iptables - Use libiptc from net-firewall/iptables for NAT support in systemd-networkd; this is used only if the running kernel does not support nftables
 sys-apps/systemd:kernel-install - Enable kernel-install
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
@@ -8131,6 +8131,7 @@ sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed 
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
+sys-auth/sssd:openid - Add support for login via OpenID Connect, such as Keycloak
 sys-auth/sssd:passkey - Add support for FIDO2 passkeys"
 sys-auth/sssd:samba - Add Privileged Attribute Certificate Support for Kerberos
 sys-auth/sssd:systemtap - Enable SystemTap/DTrace tracing
@@ -8619,6 +8620,7 @@ sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this
 sys-process/fcron:mta - Enable mta support for sending emails from fcron
 sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file.
 sys-process/fcron:system-crontab - Set up fcron to respect /etc/crontab and /etc/cron.d. If this flag is disabled, /etc/cron.d and /etc/crontab will be ignored, but /etc/cron.{hourly,daily,weekly,monthly} will still be respected. Also this creates /usr/bin/crontab symlink.
+sys-process/htop:bfd - With USE=unwind, demangle symbol names (like for C++) in backtraces via sys-libs/binutils-libs
 sys-process/htop:delayacct - Enable Linux delay accounting support via dev-libs/libnl
 sys-process/htop:hwloc - Use sys-apps/hwloc for CPU affinity support
 sys-process/htop:openvz - Enable openvz support
