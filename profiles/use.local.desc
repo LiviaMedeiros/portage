@@ -505,7 +505,6 @@ app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/featherpad:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
-app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
 app-editors/gnome-latex:latexmk - Install dev-tex/latexmk (used by default for the build tools)
 app-editors/gnome-latex:rubber - Install dev-tex/rubber (can be used for the build tools)
@@ -1527,6 +1526,7 @@ dev-debug/ltrace:elfutils - Use libdwfl from dev-libs/elfutils for frame unwindi
 dev-debug/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-debug/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-debug/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
+dev-debug/strace:ncurses - Make color support available via sys-libs/ncurses. At runtime, if enabled, defaults to 'auto', but can be disabled with --color never.
 dev-debug/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
 dev-debug/sysdig:bpf - Enable the BPF probe as alternative event source to dev-debug/scap-driver.
 dev-debug/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
@@ -6786,6 +6786,7 @@ net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm res
 net-news/rssguard:icu - Enable text encoding conversion via dev-libs/icu
 net-news/rssguard:libmpv - Enable media player support via libmpv from media-video/mpv
 net-news/rssguard:qtmultimedia - Enable media player support via dev-qt/qtmultimedia
+net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-news/sfeed:theme-mono - Use mono theme
 net-news/sfeed:theme-mono-highlight - Use mono_highlight theme
 net-news/sfeed:theme-newsboat - Use newsboat theme
@@ -7608,6 +7609,7 @@ sci-mathematics/giac:glpk - Enable the use of sci-mathematics/glpk
 sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by selecting machine-specific defaults
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gretl:extras - Build and install add-ons bundled with gretl
+sci-mathematics/highs:hipo - Build the new factorization-based interior-point solver requiring sci-libs/amd, sci-libs/metis, and virtual/cblas.
 sci-mathematics/lcalc:double - Use double precision (the upstream default)
 sci-mathematics/lcalc:double-double - Use sci-libs/qdfor double-double precision
 sci-mathematics/lcalc:pari - Use sci-mathematics/pari for elliptic curve L-functions
