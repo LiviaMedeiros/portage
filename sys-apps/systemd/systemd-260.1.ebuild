@@ -206,7 +206,6 @@ pkg_pretend() {
 			~CGROUP_BPF ~DEVTMPFS ~EPOLL ~FANOTIFY ~FHANDLE
 			~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS ~SIGNALFD ~SYSFS
 			~TIMERFD ~TMPFS_XATTR ~UNIX ~USER_NS
-			~CRYPTO_HMAC ~CRYPTO_SHA256 ~CRYPTO_USER_API_HASH
 			~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
 			~!SYSFS_DEPRECATED_V2"
 
@@ -258,6 +257,7 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/systemd-260.1-fuzz-journald.patch"
 		"${FILESDIR}/systemd-260.1-openssl-4.patch"
+		"${FILESDIR}/systemd-260.1-gcc-17.patch"
 	)
 
 	if ! use vanilla; then
