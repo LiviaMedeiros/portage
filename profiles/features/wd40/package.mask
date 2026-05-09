@@ -390,6 +390,7 @@ dev-python/jupyterlab-widgets
 dev-python/jupyterlab-server
 dev-python/jupyterlab
 dev-python/keyring
+dev-python/lzallright
 dev-python/apache-libcloud
 dev-python/moto
 dev-python/nbclassic
@@ -505,6 +506,7 @@ sci-geosciences/gnome-maps
 sys-block/thin-provisioning-tools
 >=sys-process/glances-4.1.2.1
 sys-fs/bcachefs-tools
+sys-fs/ubi_reader
 virtual/rust
 www-apps/radicale
 >=www-client/epiphany-49
