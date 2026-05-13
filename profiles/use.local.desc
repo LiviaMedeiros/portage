@@ -1365,7 +1365,6 @@ dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/prettier-ada:shared - Build shared library
 dev-ada/prettier-ada:static-pic - Build static library with pic code
 dev-ada/spawn:static-pic - Build static library with pic code
-dev-ada/templates-parser:shared - Build shared library
 dev-ada/templates-parser:static-pic - Build static library with pic code
 dev-ada/vss-extra:static-pic - Build static library with pic code
 dev-ada/vss-text:shared - Build shared library
@@ -2468,6 +2467,7 @@ dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
 dev-python/peewee:native-extensions - Compiles native C extension for more complete SQLite3 support.
 dev-python/pillow:imagequant - Build with Image Quantization Library support
+dev-python/pillow:raqm - Support setting text direction, language or font features. Requires media-libs/raqm.
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 dev-python/pyarrow:parquet - Enables read/write parquet data format
@@ -6727,8 +6727,9 @@ net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/sunshine:cuda - Enable accelerated video encoding on NVIDIA hardware
-net-misc/sunshine:libdrm - Enable video encoding via x11-libs/libdrm
-net-misc/sunshine:svt-av1 - Enables software AV1 encoding via media-libs/svt-av1
+net-misc/sunshine:libdrm - Enable KMS video capture via x11-libs/libdrm
+net-misc/sunshine:pipewire - Enable XDG Desktop Portal video capture via media-video/pipewire
+net-misc/sunshine:svt-av1 - Enable software AV1 encoding via media-libs/svt-av1
 net-misc/sunshine:trayicon - Enable system tray icon
 net-misc/sunshine:x264 - Enable software H.264 encoding via media-libs/x264
 net-misc/sunshine:x265 - Enable software HEVC encoding via media-libs/x265
