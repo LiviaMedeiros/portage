@@ -36,6 +36,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-05-29)
+# Involves a subslot bump which implies rebuilding all packages with
+# pypy3_11 target, which makes little sense now that we're days away
+# from removing the target.
+~dev-lang/pypy-3.11.7.3.23
+~dev-lang/pypy3-exe-3.11.7.3.23
+~dev-lang/pypy3-exe-bin-3.11.7.3.23
+
 # Paul Zander <negril.nx+gentoo@gmail.com> (2025-10-17)
 # to many breakages
 dev-cpp/eigen:3/5.0
@@ -97,13 +105,6 @@ x11-misc/qt5ct
 # media-video/smplayer, media-video/qmplay2 and probably many more.
 # Bug #954006. Removal some time after 2026-05-30.
 =media-video/vlc-3.0.23
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
-# Depends on Qt5 and does not appear to be ported to Qt6 upstream soon.
-# With net-irc/quassel-0.14.50_pre20260513, we provide an ~arch keyworded
-# snapshot, cut from the so far most promising PR pending upstream.
-# Bug #953029. Removal on or some time after 2026-05-30.
-<=net-irc/quassel-0.14.49
 
 # David Seifert <soap@gentoo.org> (2026-05-12)
 # dev-util/claude-code and dev-util/codex (guru) provide vastly more tokens
